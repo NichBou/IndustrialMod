@@ -1,22 +1,27 @@
 package com.bierfleisch.industrialmod;
 
+import com.bierfleisch.industrialmod.register.IndustrialModBlockEntityRegister;
+import com.bierfleisch.industrialmod.register.IndustrialModBlockRegister;
+import com.bierfleisch.industrialmod.register.IndustrialModItemRegister;
+import com.bierfleisch.industrialmod.register.IndustrialModScreenHandlerRegister;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class IndustrialMod implements ModInitializer {
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
-    public static final Logger LOGGER = LoggerFactory.getLogger("industrialmod");
+	public static final String MOD_ID = "industrialmod";
+
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+		LOGGER.info("Loading Industrial Mod");
 
-		LOGGER.info("Hello Fabric world!");
+		IndustrialModItemRegister.registerAll();
+		IndustrialModBlockRegister.registerAll();
+		IndustrialModBlockEntityRegister.registerAll();
+		IndustrialModBlockEntityRegister.registerAll();
+		IndustrialModScreenHandlerRegister.registerAll();
 	}
 }
