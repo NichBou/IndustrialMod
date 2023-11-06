@@ -22,7 +22,7 @@
 			"com.bierfleisch.industrialmod.IndustrialModClient"
 		],
 		"fabric-datagen": [
-			"com.bierfleisch.industrialmod.IndustrialModDataGenerator"
+			"com.bierfleisch.industrialmod.datagen.IndustrialModDataGenerator"
 		]
 	},
 	"mixins": [
