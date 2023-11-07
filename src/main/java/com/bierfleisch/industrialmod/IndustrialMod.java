@@ -1,9 +1,6 @@
 package com.bierfleisch.industrialmod;
 
-import com.bierfleisch.industrialmod.register.IndustrialModBlockEntityRegister;
-import com.bierfleisch.industrialmod.register.IndustrialModBlockRegister;
-import com.bierfleisch.industrialmod.register.IndustrialModItemRegister;
-import com.bierfleisch.industrialmod.register.IndustrialModScreenHandlerRegister;
+import com.bierfleisch.industrialmod.register.*;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -21,7 +18,8 @@ public class IndustrialMod implements ModInitializer {
 		IndustrialModItemRegister.registerAll();
 		IndustrialModBlockRegister.registerAll();
 		IndustrialModBlockEntityRegister.registerAll();
-		IndustrialModBlockEntityRegister.registerAll();
+		IndustrialModEntityRegister.registerAll();
+		IndustrialModItemGroupRegister.registerAll();
 		IndustrialModScreenHandlerRegister.registerAll();
 	}
 }

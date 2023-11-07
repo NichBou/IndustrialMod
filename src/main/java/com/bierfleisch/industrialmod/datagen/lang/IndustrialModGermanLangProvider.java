@@ -1,5 +1,6 @@
 package com.bierfleisch.industrialmod.datagen.lang;
 
+import com.bierfleisch.industrialmod.register.IndustrialModBlockRegister;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
@@ -10,6 +11,6 @@ public class IndustrialModGermanLangProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
-        // translationBuilder.add(IndustrialModBlockRegister.SAMPLE_ITEM, "Beispiel Item");
+        translationBuilder.add(IndustrialModBlockRegister.PUMP_BLOCK, "Pumpen Block");
     }
 }
