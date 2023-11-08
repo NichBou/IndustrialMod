@@ -1,10 +1,10 @@
 {
   "variants": {
-    "pumping=false": {
+    "has_water=false": {
       "model": "industrialmod:block/pump_block"
     },
-    "pumping=true": {
-      "model": "industrialmod:block/pump_block_pumping"
+    "has_water=true": {
+      "model": "industrialmod:block/pump_block_full"
     }
   }
 }

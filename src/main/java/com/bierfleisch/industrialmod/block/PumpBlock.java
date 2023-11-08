@@ -7,23 +7,21 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.Properties;
-import net.minecraft.state.property.Property;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class PumpBlock extends BlockWithEntity implements BlockEntityProvider {
-    public static final BooleanProperty PUMPING = BooleanProperty.of("pumping");
+    public static final BooleanProperty HAS_WATER = BooleanProperty.of("has_water");
 
     public PumpBlock(Settings settings) {
         super(settings);
-        setDefaultState(this.getDefaultState().with(PUMPING, false));
+        setDefaultState(this.getDefaultState().with(HAS_WATER, false));
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(PUMPING);
+        builder.add(HAS_WATER);
     }
 
     @Nullable

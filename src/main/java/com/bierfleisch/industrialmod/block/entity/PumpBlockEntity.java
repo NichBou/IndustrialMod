@@ -20,10 +20,6 @@ import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.Nullable;
 
 public class PumpBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory {
-    private int fromPressure;
-    private int toPressure;
-    private int pressureDiff;
-
     private static final int pressureIncrease = 10;
 
     protected final PropertyDelegate propertyDelegate;
@@ -35,7 +31,7 @@ public class PumpBlockEntity extends BlockEntity implements ExtendedScreenHandle
             @Override
             public int get(int index) {
                 return switch (index) {
-                    case 0 -> PumpBlockEntity.this.fromPressure;
+
                     default -> 0;
                 };
             }
@@ -43,7 +39,7 @@ public class PumpBlockEntity extends BlockEntity implements ExtendedScreenHandle
             @Override
             public void set(int index, int value) {
                 switch (index) {
-                    case 0 -> PumpBlockEntity.this.fromPressure = value;
+
                 }
             }
 
@@ -56,14 +52,14 @@ public class PumpBlockEntity extends BlockEntity implements ExtendedScreenHandle
 
     @Override
     public void readNbt(NbtCompound nbt) {
-        fromPressure = nbt.getInt("from_pressure");
+
 
         super.readNbt(nbt);
     }
 
     @Override
     protected void writeNbt(NbtCompound nbt) {
-        nbt.putInt("from_pressure", fromPressure);
+
 
         super.writeNbt(nbt);
     }

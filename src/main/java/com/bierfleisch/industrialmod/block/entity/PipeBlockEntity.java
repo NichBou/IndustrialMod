@@ -21,6 +21,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class PipeBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory {
     private int pressure;
+    private int flow;
 
     protected final PropertyDelegate propertyDelegate;
 
@@ -32,6 +33,7 @@ public class PipeBlockEntity extends BlockEntity implements ExtendedScreenHandle
             public int get(int index) {
                 return switch (index) {
                     case 0 -> PipeBlockEntity.this.pressure;
+                    case 1 -> PipeBlockEntity.this.flow;
                     default -> 0;
                 };
             }
@@ -40,12 +42,13 @@ public class PipeBlockEntity extends BlockEntity implements ExtendedScreenHandle
             public void set(int index, int value) {
                 switch (index) {
                     case 0 -> PipeBlockEntity.this.pressure = value;
+                    case 1 -> PipeBlockEntity.this.flow = value;
                 }
             }
 
             @Override
             public int size() {
-                return 1;
+                return 2;
             }
         };
     }
@@ -53,6 +56,7 @@ public class PipeBlockEntity extends BlockEntity implements ExtendedScreenHandle
     @Override
     public void readNbt(NbtCompound nbt) {
         pressure = nbt.getInt("pressure");
+        flow = nbt.getInt("flow");
 
         super.readNbt(nbt);
     }
@@ -60,6 +64,7 @@ public class PipeBlockEntity extends BlockEntity implements ExtendedScreenHandle
     @Override
     protected void writeNbt(NbtCompound nbt) {
         nbt.putInt("pressure", pressure);
+        nbt.putInt("flow", flow);
 
         super.writeNbt(nbt);
     }

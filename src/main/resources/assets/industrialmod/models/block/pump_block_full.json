@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "industrialmod:block/pump_block_pumping"
+    "all": "industrialmod:block/pump_block_full"
   }
 }

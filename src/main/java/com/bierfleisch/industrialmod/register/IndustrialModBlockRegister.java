@@ -17,7 +17,7 @@ public class IndustrialModBlockRegister {
     public static final PumpBlock PUMP_BLOCK = new PumpBlock(FabricBlockSettings.copyOf(Blocks.STONE));
     public static final Item PUMP_BLOCK_ITEM = new BlockItem(PUMP_BLOCK, new FabricItemSettings());
 
-    public static final PipeBlock PIPE_BLOCK = new PipeBlock(FabricBlockSettings.copyOf(Blocks.STONE));
+    public static final PipeBlock PIPE_BLOCK = new PipeBlock(FabricBlockSettings.copyOf(Blocks.STONE).nonOpaque());
     public static final Item PIPE_BLOCK_ITEM = new BlockItem(PIPE_BLOCK, new FabricItemSettings());
 
     public static void registerAll() {

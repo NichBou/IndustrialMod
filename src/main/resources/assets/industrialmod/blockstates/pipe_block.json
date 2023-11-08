@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "industrialmod:block/pipe_block"
+    }
+  }
+}
