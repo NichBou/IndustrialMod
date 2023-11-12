@@ -1,27 +1,36 @@
 package com.bierfleisch.industrialmod.block;
 
 import com.bierfleisch.industrialmod.block.entity.PipeBlockEntity;
+import com.bierfleisch.industrialmod.register.IndustrialModBlockEntityRegister;
+import com.bierfleisch.industrialmod.register.IndustrialModBlockRegister;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class PipeBlock extends BlockWithEntity implements BlockEntityProvider {
-    public static final BooleanProperty HAS_WATER = BooleanProperty.of("has_water");
+public class PipeBlock extends LiquidContainerBlock {
+    public static final BooleanProperty FILLED = BooleanProperty.of("filled");
 
     public PipeBlock(Settings settings) {
         super(settings);
-        setDefaultState(this.getDefaultState().with(HAS_WATER, false));
+        setDefaultState(this.getDefaultState().with(FILLED, false));
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(HAS_WATER);
+        builder.add(FILLED);
     }
 
     @Nullable
@@ -30,16 +39,10 @@ public class PipeBlock extends BlockWithEntity implements BlockEntityProvider {
         return new PipeBlockEntity(pos, state);
     }
 
+    @Nullable
     @Override
-    public BlockRenderType getRenderType(BlockState state) {
-        return BlockRenderType.MODEL;
-    }
-
-    @Override
-    public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
-        if (world.isClient()) {
-            return;
-        }
-
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return validateTicker(type, IndustrialModBlockEntityRegister.PIPE_BLOCK_ENTITY,
+                ((world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1)));
     }
 }

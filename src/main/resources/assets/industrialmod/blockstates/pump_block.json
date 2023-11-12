@@ -1,9 +1,9 @@
 {
   "variants": {
-    "has_water=false": {
+    "filled=false": {
       "model": "industrialmod:block/pump_block"
     },
-    "has_water=true": {
+    "filled=true": {
       "model": "industrialmod:block/pump_block_full"
     }
   }

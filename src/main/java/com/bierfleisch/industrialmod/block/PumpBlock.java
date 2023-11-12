@@ -11,33 +11,15 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class PumpBlock extends BlockWithEntity implements BlockEntityProvider {
-    public static final BooleanProperty HAS_WATER = BooleanProperty.of("has_water");
+public class PumpBlock extends PipeBlock {
 
     public PumpBlock(Settings settings) {
         super(settings);
-        setDefaultState(this.getDefaultState().with(HAS_WATER, false));
-    }
-
-    @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(HAS_WATER);
     }
 
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return new PumpBlockEntity(pos, state);
-    }
-
-    @Override
-    public BlockRenderType getRenderType(BlockState state) {
-        return BlockRenderType.MODEL;
-    }
-
-    @Nullable
-    @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return super.getTicker(world, state, type);
     }
 }
