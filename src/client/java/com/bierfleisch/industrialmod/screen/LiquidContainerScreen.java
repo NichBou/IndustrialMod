@@ -37,6 +37,7 @@ public class LiquidContainerScreen extends HandledScreen<LiquidContainerScreenHa
 
         context.drawText(textRenderer, "Pressure: " + screenHandler.getPressure(), getCenteredWidth(), textRenderer.fontHeight + titleY, 4210752, false);
         context.drawText(textRenderer, "Flow: " + screenHandler.getFlow(), getCenteredWidth(), textRenderer.fontHeight * 2 + titleY, 4210752, false);
+        context.drawText(textRenderer, "Amount of connected: " + screenHandler.getConnectedAmount(), getCenteredWidth(), textRenderer.fontHeight * 3 + titleY, 4210752, false);
     }
 
     @Override

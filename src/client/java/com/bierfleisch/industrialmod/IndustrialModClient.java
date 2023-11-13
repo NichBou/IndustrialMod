@@ -12,7 +12,7 @@ import net.minecraft.client.render.RenderLayer;
 public class IndustrialModClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		BlockRenderLayerMap.INSTANCE.putBlock(IndustrialModBlockRegister.PIPE_BLOCK, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(IndustrialModBlockRegister.PIPE_BLOCK, RenderLayer.getTranslucent());
 
 		IndustrialModScreenRegister.registerAll();
 	}

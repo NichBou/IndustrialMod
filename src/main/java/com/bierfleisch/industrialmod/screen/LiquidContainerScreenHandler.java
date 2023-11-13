@@ -18,7 +18,7 @@ public class LiquidContainerScreenHandler extends ScreenHandler {
     private PropertyDelegate propertyDelegate;
 
     public LiquidContainerScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, new ArrayPropertyDelegate(2));
+        this(syncId, playerInventory, new ArrayPropertyDelegate(3));
     }
 
     public LiquidContainerScreenHandler(int syncId, PlayerInventory playerInventory, PropertyDelegate propertyDelegate) {
@@ -34,6 +34,10 @@ public class LiquidContainerScreenHandler extends ScreenHandler {
 
     public int getFlow() {
         return propertyDelegate.get(LiquidContainerBlockEntity.FLOW_PROPERTY_INDEX);
+    }
+
+    public int getConnectedAmount() {
+        return propertyDelegate.get(LiquidContainerBlockEntity.CONNECTED_PROPERTY_INDEX);
     }
 
     @Override

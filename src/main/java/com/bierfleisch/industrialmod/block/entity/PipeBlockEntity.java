@@ -1,5 +1,6 @@
 package com.bierfleisch.industrialmod.block.entity;
 
+import com.bierfleisch.industrialmod.block.PipeBlock;
 import com.bierfleisch.industrialmod.register.IndustrialModBlockEntityRegister;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntityType;
@@ -22,8 +23,7 @@ public class PipeBlockEntity extends LiquidContainerBlockEntity {
     }
 
     private BlockState getUpdatedState(BlockState state) {
-        //return state.with(FILLED, !connectedNeighbors.isEmpty());
-        return state;
+        return state.with(PipeBlock.FILLED, this.getFlow() > 0);
     }
 
     @Override
