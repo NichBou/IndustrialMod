@@ -48,8 +48,6 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
         this.settings = this.createSettings();
     }
 
-
-
     protected LiquidContainerSettings createSettings() {
         return new LiquidContainerSettings();
     }
@@ -101,7 +99,7 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
     private void privateTick(World world, BlockPos pos, BlockState state) {
         if (world.isClient()) return;
 
-        int maxFoundPressure = settings.generatedPressure;
+        int maxFoundPressure = settings.generatedPressure + 1;
         for (var pipe : connectedNeighbors) {
             int connectedPressure = pipe.getPressure();
 
@@ -109,7 +107,7 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
                 maxFoundPressure = connectedPressure;
             }
         }
-        this.setPressure(maxFoundPressure);
+        this.setPressure(maxFoundPressure - 1);
 
         this.updateState();
     }
@@ -178,8 +176,23 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
     public void neighborUpdate(BlockState state, World world, BlockPos pos) {
         if (world.isClient()) return;
 
-        loadNeighbors();
+        strongUpdate();
         updateState();
+    }
+
+    public void weakUpdate() {
+        loadNeighbors();
+    }
+
+    public void strongUpdate() {
+        weakUpdate();
+        updateNeighbors();
+    }
+
+    private void updateNeighbors() {
+        for (var neighbor : connectedNeighbors) {
+            neighbor.weakUpdate();
+        }
     }
 
     private void loadNeighbors() {
