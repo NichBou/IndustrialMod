@@ -16,12 +16,6 @@ public class PipeBlockEntity extends LiquidContainerBlockEntity {
         super(type, pos, state);
     }
 
-    @Override
-    protected void updateState() {
-        BlockState state = getUpdatedState(this.world.getBlockState(this.pos));
-        this.world.setBlockState(this.pos, state);
-    }
-
     private BlockState getUpdatedState(BlockState state) {
         return state.with(PipeBlock.FILLED, this.getFlow() > 0);
     }

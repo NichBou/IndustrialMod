@@ -1,5 +1,6 @@
 package com.bierfleisch.industrialmod.block.entity;
 
+import com.bierfleisch.industrialmod.IndustrialMod;
 import com.bierfleisch.industrialmod.block.LiquidContainerSettings;
 import com.bierfleisch.industrialmod.screen.LiquidContainerScreenHandler;
 import com.google.common.collect.Iterators;
@@ -46,6 +47,7 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
 
         propertyDelegate = createPropertyDelegate();
         this.settings = this.createSettings();
+
     }
 
     protected LiquidContainerSettings createSettings() {
@@ -86,17 +88,6 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
      * @param state
      */
     public void tick(World world, BlockPos pos, BlockState state) {
-        this.privateTick(world, pos, state);
-    }
-
-    /**
-     * Custom tick logic for the LiquidContainerBlockEntity class. <br>
-     * <b>Not to be overwritten by child class, for this override tick() and call super.tick()</b>
-     * @param world
-     * @param pos
-     * @param state
-     */
-    private void privateTick(World world, BlockPos pos, BlockState state) {
         if (world.isClient()) return;
 
         int maxFoundPressure = settings.generatedPressure + 1;
@@ -109,7 +100,7 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
         }
         this.setPressure(maxFoundPressure - 1);
 
-        this.updateState();
+        world.setBlockState(pos, getUpdatedState(state));
     }
 
     @Nullable
@@ -118,19 +109,8 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
         return new LiquidContainerScreenHandler(syncId, playerInventory, this.propertyDelegate);
     }
 
-    protected void updateState() { }
-
     private BlockState getUpdatedState(BlockState state) {
         return state;
-    }
-
-    private void transferFlow(LiquidContainerBlockEntity pipe, int amount) {
-        this.flow -= amount;
-        pipe.addFlow(amount);
-    }
-
-    private void transferPressure(LiquidContainerBlockEntity pipe) {
-        pipe.setPressure(this.pressure - 1);
     }
 
     public void setPressure(int value) {
@@ -143,18 +123,6 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
 
     public int getFlow() {
         return flow;
-    }
-
-    public boolean addFlow(int amount) {
-        if (amount > getRemainingFlowSpace()) return false;
-
-        this.flow += amount;
-
-        return true;
-    }
-
-    public int getRemainingFlowSpace() {
-        return settings.maxFlow - this.flow;
     }
 
     @Override
@@ -176,26 +144,25 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
     public void neighborUpdate(BlockState state, World world, BlockPos pos) {
         if (world.isClient()) return;
 
-        strongUpdate();
-        updateState();
+        strongUpdate(world);
     }
 
-    public void weakUpdate() {
-        loadNeighbors();
+    public void weakUpdate(World world) {
+        loadNeighbors(world);
     }
 
-    public void strongUpdate() {
-        weakUpdate();
-        updateNeighbors();
+    public void strongUpdate(World world) {
+        weakUpdate(world);
+        updateNeighbors(world);
     }
 
-    private void updateNeighbors() {
+    private void updateNeighbors(World world) {
         for (var neighbor : connectedNeighbors) {
-            neighbor.weakUpdate();
+            neighbor.weakUpdate(world);
         }
     }
 
-    private void loadNeighbors() {
+    private void loadNeighbors(World world) {
         this.connectedNeighbors.clear();
 
         Iterator<Direction> directions = Iterators.concat(Direction.Type.HORIZONTAL.iterator(), Direction.Type.VERTICAL.iterator());
@@ -220,6 +187,7 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
 
     @Override
     public NbtCompound toInitialChunkDataNbt() {
+        weakUpdate(world);
         return createNbt();
     }
 
