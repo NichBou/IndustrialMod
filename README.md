@@ -1,48 +1,22 @@
 # Industrial Mod
 
----
+### Fluids and Materials
+
+``Radioactive Water:``
+Water after it came in contact with fuel rods or other radioactive materials
 
 
-# Fluids
+### Buildable Structures
 
----
-
-```
-Custom fluids this mod will provide
-```
-
-Radioactive Water
-```
-
-Water after it came in contact with fuel rods
-````
+``Coal-fired Power Station``
 
 
-# Concepts
+``Nuclear Power Station``
+
 
 ---
 
-### AKW
-```
-Blocks and items used in building an akw
-````
-
-Fuel Rod
-```
-
-```
-
-idk
-```
-
-```
-
----
-
-### Fluid Transportation
-
-Blocks which interact and transport fluid
-
+### Fluid Interaction
 
 Pump
 ```
