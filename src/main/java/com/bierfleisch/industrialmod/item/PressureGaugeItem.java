@@ -9,6 +9,6 @@ import java.util.function.Consumer;
 
 public class PressureGaugeItem extends Item {
     public PressureGaugeItem() {
-        super(new FabricItemSettings().maxDamage(100).c(1));
+        super(new FabricItemSettings().maxDamage(100));
     }
 }
