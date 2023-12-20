@@ -1,8 +1,7 @@
-package com.bierfleisch.industrialmod.block.liquid.transporter.pipe;
+package com.bierfleisch.industrialmod.block.fluid.transporter.pipe;
 
 import com.bierfleisch.industrialmod.block.entity.fluid.transporter.pipe.PipeBlockEntity;
-import com.bierfleisch.industrialmod.block.liquid.container.FluidContainerBlock;
-import com.bierfleisch.industrialmod.fluid.FluidType;
+import com.bierfleisch.industrialmod.block.fluid.container.FluidContainerBlock;
 import com.bierfleisch.industrialmod.register.IndustrialModBlockEntityRegister;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;

@@ -1,4 +1,4 @@
-package com.bierfleisch.industrialmod.block.liquid.container;
+package com.bierfleisch.industrialmod.block.fluid.container;
 
 import com.bierfleisch.industrialmod.block.entity.fluid.container.FluidContainerBlockEntity;
 import com.bierfleisch.industrialmod.fluid.FluidType;
@@ -18,8 +18,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.Dictionary;
 
 /**
  * Base class for all blocks being able to

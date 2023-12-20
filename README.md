@@ -1,22 +1,16 @@
 # Industrial Mod
 
-### Fluids and Materials
-
-``Radioactive Water:``
-Water after it came in contact with fuel rods or other radioactive materials
 
 
-### Buildable Structures
 
-``Coal-fired Power Station``
-
-
-``Nuclear Power Station``
+### Materials
 
 
----
 
-### Fluid Interaction
+
+
+
+### Fluid Block Interaction
 
 Pump
 ```
@@ -33,4 +27,6 @@ Gas Pipe
 Transports any gas. Flow rate decreases with each pipe segment (except downwards).
 ```
 
----
+## References
+
+see [Fluidsystem](./docs/FluidSystem.md)

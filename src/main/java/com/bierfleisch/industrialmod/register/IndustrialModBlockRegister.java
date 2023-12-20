@@ -1,9 +1,9 @@
 package com.bierfleisch.industrialmod.register;
 
 import com.bierfleisch.industrialmod.IndustrialMod;
-import com.bierfleisch.industrialmod.block.liquid.container.tank.FluidTankBlock;
-import com.bierfleisch.industrialmod.block.liquid.transporter.pipe.PipeBlock;
-import com.bierfleisch.industrialmod.block.liquid.functional.pump.PumpBlock;
+import com.bierfleisch.industrialmod.block.fluid.container.tank.FluidTankBlock;
+import com.bierfleisch.industrialmod.block.fluid.transporter.pipe.PipeBlock;
+import com.bierfleisch.industrialmod.block.fluid.functional.pump.PumpBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;

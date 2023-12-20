@@ -1,12 +1,11 @@
 package com.bierfleisch.industrialmod.block.entity.fluid.transporter.pipe;
 
 import com.bierfleisch.industrialmod.block.entity.fluid.container.FluidContainerBlockEntity;
-import com.bierfleisch.industrialmod.block.liquid.container.FluidContainerBlock;
+import com.bierfleisch.industrialmod.block.fluid.container.FluidContainerBlock;
 import com.bierfleisch.industrialmod.register.IndustrialModBlockEntityRegister;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
 public class PipeBlockEntity extends FluidContainerBlockEntity {
     public PipeBlockEntity(BlockPos pos, BlockState state) {

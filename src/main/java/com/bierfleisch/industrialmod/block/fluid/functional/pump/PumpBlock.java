@@ -1,9 +1,7 @@
-package com.bierfleisch.industrialmod.block.liquid.functional.pump;
+package com.bierfleisch.industrialmod.block.fluid.functional.pump;
 
 import com.bierfleisch.industrialmod.block.entity.fluid.functional.pump.PumpBlockEntity;
-import com.bierfleisch.industrialmod.block.liquid.functional.FluidFunctionalBlock;
-import com.bierfleisch.industrialmod.fluid.FluidInputType;
-import com.bierfleisch.industrialmod.fluid.FluidType;
+import com.bierfleisch.industrialmod.block.fluid.functional.FluidFunctionalBlock;
 import com.bierfleisch.industrialmod.register.IndustrialModBlockEntityRegister;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
@@ -14,7 +12,6 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 

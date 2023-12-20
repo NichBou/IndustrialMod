@@ -1,7 +1,7 @@
-package com.bierfleisch.industrialmod.block.liquid.container.tank;
+package com.bierfleisch.industrialmod.block.fluid.container.tank;
 
 import com.bierfleisch.industrialmod.block.entity.fluid.container.tank.FluidTankBlockEntity;
-import com.bierfleisch.industrialmod.block.liquid.container.FluidContainerBlock;
+import com.bierfleisch.industrialmod.block.fluid.container.FluidContainerBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.math.BlockPos;
