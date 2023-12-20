@@ -17,7 +17,7 @@ public class IndustrialModItemGroupRegister {
                 entries.add(IndustrialModBlockRegister.PUMP_BLOCK_ITEM);
                 entries.add(IndustrialModBlockRegister.PIPE_BLOCK_ITEM);
                 entries.add(IndustrialModBlockRegister.TANK_BLOCK_ITEM);
-                entries.add(IndustrialModBlockRegister.URANIUM_ORE_BLOCK_ITEM);
+
             })
             .build();
 
@@ -30,8 +30,21 @@ public class IndustrialModItemGroupRegister {
             })
             .build();
 
+    public static final ItemGroup URANIUM_GROUP = FabricItemGroup.builder()
+            .icon(() -> new ItemStack(IndustrialModItemRegister.PRESSURE_GAUGE_ITEM))
+            .displayName(Text.translatable("itemGroup." + IndustrialMod.MOD_ID + ".uranium_item_goup"))
+            .entries((displayContext, entries) -> {
+                entries.add(IndustrialModBlockRegister.URANIUM_ORE_BLOCK_ITEM);
+                entries.add(IndustrialModItemRegister.RAW_URANIUM_ITEM);
+            })
+            .build();
+
+
+
+
     public static void registerAll() {
         Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "block_item_group"), BLOCK_ITEM_GROUP);
         Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "tool_item_group"), TOOL_ITEM_GROUP);
+        Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "uranium_item_group"), URANIUM_GROUP);
     }
 }
