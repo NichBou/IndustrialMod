@@ -1,4 +1,4 @@
-package com.bierfleisch.industrialmod.item;
+package com.bierfleisch.industrialmod.item.tool;
 
 import net.fabricmc.fabric.api.item.v1.CustomDamageHandler;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;

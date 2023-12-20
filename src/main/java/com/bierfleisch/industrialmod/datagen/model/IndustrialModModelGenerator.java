@@ -1,7 +1,6 @@
 package com.bierfleisch.industrialmod.datagen.model;
 
-import com.bierfleisch.industrialmod.register.IndustrialModBlockRegister;
-import com.bierfleisch.industrialmod.register.IndustrialModItemRegister;
+import com.bierfleisch.industrialmod.item.IndustrialModToolItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -20,7 +19,7 @@ public class IndustrialModModelGenerator extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(IndustrialModItemRegister.PRESSURE_GAUGE_ITEM, Models.GENERATED);
-        itemModelGenerator.register(IndustrialModItemRegister.WRENCH_ITEM, Models.GENERATED);
+        itemModelGenerator.register(IndustrialModToolItems.PRESSURE_GAUGE_ITEM, Models.GENERATED);
+        itemModelGenerator.register(IndustrialModToolItems.WRENCH_ITEM, Models.GENERATED);
     }
 }

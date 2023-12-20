@@ -1,10 +1,10 @@
-package com.bierfleisch.industrialmod.item.ore;
+package com.bierfleisch.industrialmod.item.tool;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 
-public class RawUraniumItem extends Item {
-    public RawUraniumItem() {
+public class WrenchItem extends Item {
+    public WrenchItem() {
         super(new FabricItemSettings());
     }
 }

@@ -1,6 +1,8 @@
 package com.bierfleisch.industrialmod.register;
 
 import com.bierfleisch.industrialmod.IndustrialMod;
+import com.bierfleisch.industrialmod.item.IndustrialModRawMaterialItems;
+import com.bierfleisch.industrialmod.item.IndustrialModToolItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -22,20 +24,20 @@ public class IndustrialModItemGroupRegister {
             .build();
 
     public static final ItemGroup TOOL_ITEM_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(IndustrialModItemRegister.PRESSURE_GAUGE_ITEM))
+            .icon(() -> new ItemStack(IndustrialModToolItems.PRESSURE_GAUGE_ITEM))
             .displayName(Text.translatable("itemGroup." + IndustrialMod.MOD_ID + ".tool_item_group"))
             .entries((displayContext, entries) -> {
-                entries.add(IndustrialModItemRegister.PRESSURE_GAUGE_ITEM);
-                entries.add(IndustrialModItemRegister.WRENCH_ITEM);
+                entries.add(IndustrialModToolItems.PRESSURE_GAUGE_ITEM);
+                entries.add(IndustrialModToolItems.WRENCH_ITEM);
             })
             .build();
 
     public static final ItemGroup URANIUM_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(IndustrialModItemRegister.PRESSURE_GAUGE_ITEM))
+            .icon(() -> new ItemStack(IndustrialModToolItems.PRESSURE_GAUGE_ITEM))
             .displayName(Text.translatable("itemGroup." + IndustrialMod.MOD_ID + ".uranium_item_goup"))
             .entries((displayContext, entries) -> {
                 entries.add(IndustrialModBlockRegister.URANIUM_ORE_BLOCK_ITEM);
-                entries.add(IndustrialModItemRegister.RAW_URANIUM_ITEM);
+                entries.add(IndustrialModRawMaterialItems.RAW_URANIUM_ITEM);
             })
             .build();
 
