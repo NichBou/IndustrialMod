@@ -17,6 +17,7 @@ public class IndustrialModItemGroupRegister {
                 entries.add(IndustrialModBlockRegister.PUMP_BLOCK_ITEM);
                 entries.add(IndustrialModBlockRegister.PIPE_BLOCK_ITEM);
                 entries.add(IndustrialModBlockRegister.TANK_BLOCK_ITEM);
+                entries.add(IndustrialModBlockRegister.URANIUM_ORE_BLOCK_ITEM);
             })
             .build();
 
