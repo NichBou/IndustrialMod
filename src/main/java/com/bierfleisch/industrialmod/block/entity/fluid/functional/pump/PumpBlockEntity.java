@@ -1,10 +1,10 @@
-package com.bierfleisch.industrialmod.block.entity;
+package com.bierfleisch.industrialmod.block.entity.fluid.functional.pump;
 
-import com.bierfleisch.industrialmod.block.LiquidContainerSettings;
+import com.bierfleisch.industrialmod.fluid.FluidContainerSettings;
+import com.bierfleisch.industrialmod.block.entity.fluid.transporter.pipe.PipeBlockEntity;
 import com.bierfleisch.industrialmod.register.IndustrialModBlockEntityRegister;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
 public class PumpBlockEntity extends PipeBlockEntity {
     public PumpBlockEntity(BlockPos pos, BlockState state) {
@@ -12,9 +12,7 @@ public class PumpBlockEntity extends PipeBlockEntity {
     }
 
     @Override
-    protected LiquidContainerSettings createSettings() {
-        return super.createSettings().setGeneratedPressure(10);
+    protected FluidContainerSettings createSettings() {
+        return super.createSettings();
     }
-
-
 }

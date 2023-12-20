@@ -1,10 +1,10 @@
 {
   "variants": {
-    "filled=false": {
+    "full=false": {
       "model": "industrialmod:block/pipe_block"
     },
-    "filled=true": {
-      "model": "industrialmod:block/pipe_block_filled"
+    "full=true": {
+      "model": "industrialmod:block/pipe_block_full"
     }
   }
 }

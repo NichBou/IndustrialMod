@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "industrialmod:block/pipe_block_filled"
+    "all": "industrialmod:block/tank_block"
   }
 }

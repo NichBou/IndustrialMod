@@ -1,24 +1,20 @@
-package com.bierfleisch.industrialmod.block.entity;
+package com.bierfleisch.industrialmod.block.entity.fluid.container;
 
-import com.bierfleisch.industrialmod.IndustrialMod;
-import com.bierfleisch.industrialmod.block.LiquidContainerSettings;
+import com.bierfleisch.industrialmod.fluid.FluidContainerSettings;
 import com.bierfleisch.industrialmod.screen.LiquidContainerScreenHandler;
 import com.google.common.collect.Iterators;
-import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -29,29 +25,28 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public abstract class LiquidContainerBlockEntity extends BlockEntity implements NamedScreenHandlerFactory {
+public abstract class FluidContainerBlockEntity extends BlockEntity implements NamedScreenHandlerFactory {
     private int pressure = 0;
     private int flow = 0;
 
-    protected final LiquidContainerSettings settings;
+    protected final FluidContainerSettings settings;
 
     public static final int PRESSURE_PROPERTY_INDEX = 0;
     public static final int FLOW_PROPERTY_INDEX = 1;
     public static final int CONNECTED_PROPERTY_INDEX = 2;
 
-    protected final List<LiquidContainerBlockEntity> connectedNeighbors = new ArrayList<>();
+    protected final List<FluidContainerBlockEntity> connectedNeighbors = new ArrayList<>();
     protected final PropertyDelegate propertyDelegate;
 
-    public LiquidContainerBlockEntity(BlockEntityType type, BlockPos pos, BlockState state) {
+    public FluidContainerBlockEntity(BlockEntityType type, BlockPos pos, BlockState state) {
         super(type, pos, state);
 
         propertyDelegate = createPropertyDelegate();
         this.settings = this.createSettings();
-
     }
 
-    protected LiquidContainerSettings createSettings() {
-        return new LiquidContainerSettings();
+    protected FluidContainerSettings createSettings() {
+        return new FluidContainerSettings();
     }
 
     protected PropertyDelegate createPropertyDelegate() {
@@ -59,9 +54,9 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
             @Override
             public int get(int index) {
                 return switch (index) {
-                    case PRESSURE_PROPERTY_INDEX -> LiquidContainerBlockEntity.this.pressure;
-                    case FLOW_PROPERTY_INDEX -> LiquidContainerBlockEntity.this.flow;
-                    case CONNECTED_PROPERTY_INDEX -> LiquidContainerBlockEntity.this.connectedNeighbors.size();
+                    case PRESSURE_PROPERTY_INDEX -> FluidContainerBlockEntity.this.pressure;
+                    case FLOW_PROPERTY_INDEX -> FluidContainerBlockEntity.this.flow;
+                    case CONNECTED_PROPERTY_INDEX -> FluidContainerBlockEntity.this.connectedNeighbors.size();
                     default -> 0;
                 };
             }
@@ -69,8 +64,8 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
             @Override
             public void set(int index, int value) {
                 switch (index) {
-                    case PRESSURE_PROPERTY_INDEX -> LiquidContainerBlockEntity.this.pressure = value;
-                    case FLOW_PROPERTY_INDEX -> LiquidContainerBlockEntity.this.flow = value;
+                    case PRESSURE_PROPERTY_INDEX -> FluidContainerBlockEntity.this.pressure = value;
+                    case FLOW_PROPERTY_INDEX -> FluidContainerBlockEntity.this.flow = value;
                 }
             }
 
@@ -82,7 +77,8 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
     }
 
     /**
-     * Called every tick. Can be overwritten, but super must be called.
+     * Called every tick. Can be overwritten, but super must be called at the end.
+     *
      * @param world
      * @param pos
      * @param state
@@ -90,7 +86,7 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
     public void tick(World world, BlockPos pos, BlockState state) {
         if (world.isClient()) return;
 
-        int maxFoundPressure = settings.generatedPressure + 1;
+        int maxFoundPressure = 1;
         for (var pipe : connectedNeighbors) {
             int connectedPressure = pipe.getPressure();
 
@@ -173,8 +169,8 @@ public abstract class LiquidContainerBlockEntity extends BlockEntity implements 
 
             BlockEntity neighbor = world.getBlockEntity(neighborPos);
 
-            if (neighbor instanceof LiquidContainerBlockEntity) {
-                connectedNeighbors.add((LiquidContainerBlockEntity) neighbor);
+            if (neighbor instanceof FluidContainerBlockEntity) {
+                connectedNeighbors.add((FluidContainerBlockEntity) neighbor);
             }
         }
     }

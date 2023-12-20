@@ -16,6 +16,7 @@ public class IndustrialModItemGroupRegister {
             .entries((displayContext, entries) -> {
                 entries.add(IndustrialModBlockRegister.PUMP_BLOCK_ITEM);
                 entries.add(IndustrialModBlockRegister.PIPE_BLOCK_ITEM);
+                entries.add(IndustrialModBlockRegister.TANK_BLOCK_ITEM);
             })
             .build();
 
@@ -24,6 +25,7 @@ public class IndustrialModItemGroupRegister {
             .displayName(Text.translatable("itemGroup." + IndustrialMod.MOD_ID + ".tool_item_group"))
             .entries((displayContext, entries) -> {
                 entries.add(IndustrialModItemRegister.PRESSURE_GAUGE_ITEM);
+                entries.add(IndustrialModItemRegister.WRENCH_ITEM);
             })
             .build();
 

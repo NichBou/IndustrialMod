@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "full=false": {
+      "model": "industrialmod:block/tank_block"
+    },
+    "full=true": {
+      "model": "industrialmod:block/tank_block_full"
+    }
+  }
+}

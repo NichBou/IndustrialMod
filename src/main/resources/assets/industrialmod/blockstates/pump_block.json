@@ -1,9 +1,9 @@
 {
   "variants": {
-    "filled=false": {
+    "full=false": {
       "model": "industrialmod:block/pump_block"
     },
-    "filled=true": {
+    "full=true": {
       "model": "industrialmod:block/pump_block_full"
     }
   }

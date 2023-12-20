@@ -1,36 +1,29 @@
-package com.bierfleisch.industrialmod.block;
+package com.bierfleisch.industrialmod.block.liquid.transporter.pipe;
 
-import com.bierfleisch.industrialmod.block.entity.PipeBlockEntity;
+import com.bierfleisch.industrialmod.block.entity.fluid.transporter.pipe.PipeBlockEntity;
+import com.bierfleisch.industrialmod.block.liquid.container.FluidContainerBlock;
+import com.bierfleisch.industrialmod.fluid.FluidType;
 import com.bierfleisch.industrialmod.register.IndustrialModBlockEntityRegister;
-import com.bierfleisch.industrialmod.register.IndustrialModBlockRegister;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.Properties;
-import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class PipeBlock extends LiquidContainerBlock {
-    public static final BooleanProperty FILLED = BooleanProperty.of("filled");
+public class PipeBlock extends FluidContainerBlock {
+    private static final VoxelShape SHAPE = Block.createCuboidShape(0, 6, 0, 16, 10, 16);
 
     public PipeBlock(Settings settings) {
         super(settings);
-        setDefaultState(this.getDefaultState().with(FILLED, false));
     }
 
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FILLED);
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return SHAPE;
     }
 
     @Nullable
