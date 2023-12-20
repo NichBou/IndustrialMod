@@ -1,10 +1,62 @@
 {
-  "variants": {
-    "full=false": {
-      "model": "industrialmod:block/pipe_block"
+  "multipart":[
+    {
+      "apply": {
+        "model": "industrialmod:block/pipe_block_core"
+      }
     },
-    "full=true": {
-      "model": "industrialmod:block/pipe_block_full"
+    {
+      "apply": {
+        "model": "industrialmod:block/pipe_block_segment"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "industrialmod:block/pipe_block_segment",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "industrialmod:block/pipe_block_segment",
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "industrialmod:block/pipe_block_segment",
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "industrialmod:block/pipe_block_segment",
+        "x": 90
+      },
+      "when": {
+        "down": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "industrialmod:block/pipe_block_segment",
+        "x": 270
+      },
+      "when": {
+        "up": "true"
+      }
     }
-  }
+  ]
 }
