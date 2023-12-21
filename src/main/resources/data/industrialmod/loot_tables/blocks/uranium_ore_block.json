@@ -6,9 +6,9 @@
       "entries" :  [
         {
           "type" :  "minecraft:item" ,
-          "name" :  "IndustrialMod:uranium_ore_block"
+          "name" :  "industrialmod:raw_uranium_item"
         }
-      ] ,
+      ],
       "conditions" :  [
     {
     "condition" :  "minecraft:survives_explosion"

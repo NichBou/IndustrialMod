@@ -28,33 +28,13 @@ public class IndustrialModBlockRegister {
 
 
 
-    public static final Block URANIUM_ORE_BLOCK = registerBlock("uranium_ore_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block URANIUM_ORE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.STONE));
 
     public static final Item URANIUM_ORE_BLOCK_ITEM = new BlockItem(URANIUM_ORE_BLOCK, new FabricItemSettings());
 
 
     public static final PlutoniumOreBlock PLUTONIUM_ORE_BLOCK = new PlutoniumOreBlock(FabricBlockSettings.copyOf(Blocks.STONE));
     public static final Item PLUTONIUM_ORE_BLOCK_ITEM = new BlockItem(PLUTONIUM_ORE_BLOCK, new FabricItemSettings());
-
-
-
-
-    private static Block registerBlock(String name, Block block) {
-        registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, new Identifier(IndustrialMod.MOD_ID, name), block);
-    }
-
-    private static Item registerBlockItem(String name, Block block) {
-        return Registry.register(Registries.ITEM, new Identifier(IndustrialMod.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings()));
-    }
-
-
-
-
-
-
 
     public static void registerAll() {
         IndustrialMod.LOGGER.info("Loading Blocks");

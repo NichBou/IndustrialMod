@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "IndustrialMod:uranium_ore_block"
+    "industrialmod:uranium_ore_block"
 
   ]
 }
