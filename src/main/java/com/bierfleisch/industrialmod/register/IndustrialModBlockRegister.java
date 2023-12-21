@@ -41,7 +41,7 @@ public class IndustrialModBlockRegister {
         register("pipe_block", PIPE_BLOCK, PIPE_BLOCK_ITEM);
         register("tank_block", TANK_BLOCK, TANK_BLOCK_ITEM);
         register("uranium_ore_block", URANIUM_ORE_BLOCK, URANIUM_ORE_BLOCK_ITEM);
-        register("plutonium_block", PLUTONIUM_ORE_BLOCK, PLUTONIUM_ORE_BLOCK_ITEM);
+        register("plutonium_ore_block", PLUTONIUM_ORE_BLOCK, PLUTONIUM_ORE_BLOCK_ITEM);
     }
 
     private static void register(String path, Block block, Item blockItem) {
