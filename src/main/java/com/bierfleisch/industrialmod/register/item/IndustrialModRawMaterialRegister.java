@@ -12,6 +12,6 @@ public class IndustrialModRawMaterialRegister {
     public static void registerAll() {
         IndustrialMod.LOGGER.info("Loading Raw Material Items");
 
-        Registry.register(Registries.ITEM, new Identifier(IndustrialMod.MOD_ID, "raw_uranium"), IndustrialModRawMaterialItems.RAW_URANIUM_ITEM);
+        Registry.register(Registries.ITEM, new Identifier(IndustrialMod.MOD_ID, "raw_uranium_item"), IndustrialModRawMaterialItems.RAW_URANIUM_ITEM);
     }
 }
