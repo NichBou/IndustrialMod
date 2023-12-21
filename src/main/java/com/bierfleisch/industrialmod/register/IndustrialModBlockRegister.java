@@ -15,6 +15,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import javax.print.DocFlavor;
+
 public class IndustrialModBlockRegister {
     public static final PumpBlock PUMP_BLOCK = new PumpBlock(FabricBlockSettings.copyOf(Blocks.STONE));
     public static final Item PUMP_BLOCK_ITEM = new BlockItem(PUMP_BLOCK, new FabricItemSettings());
