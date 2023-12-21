@@ -5,7 +5,7 @@ import com.bierfleisch.industrialmod.block.fluid.container.tank.FluidTankBlock;
 import com.bierfleisch.industrialmod.block.fluid.transporter.pipe.PipeBlock;
 import com.bierfleisch.industrialmod.block.fluid.functional.pump.PumpBlock;
 import com.bierfleisch.industrialmod.block.ore.PlutoniumOreBlock;
-import com.bierfleisch.industrialmod.block.ore.UraniumOreBlock;
+
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -15,8 +15,6 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-
-import javax.print.DocFlavor;
 
 public class IndustrialModBlockRegister {
     public static final PumpBlock PUMP_BLOCK = new PumpBlock(FabricBlockSettings.copyOf(Blocks.STONE));
@@ -28,11 +26,35 @@ public class IndustrialModBlockRegister {
     public static final FluidTankBlock TANK_BLOCK = new FluidTankBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque());
     public static final Item TANK_BLOCK_ITEM = new BlockItem(TANK_BLOCK, new FabricItemSettings());
 
-    public static final UraniumOreBlock URANIUM_ORE_BLOCK = new UraniumOreBlock(FabricBlockSettings.copyOf(Blocks.STONE));
+
+
+    public static final Block URANIUM_ORE_BLOCK = registerBlock("uranium_ore_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+
     public static final Item URANIUM_ORE_BLOCK_ITEM = new BlockItem(URANIUM_ORE_BLOCK, new FabricItemSettings());
+
 
     public static final PlutoniumOreBlock PLUTONIUM_ORE_BLOCK = new PlutoniumOreBlock(FabricBlockSettings.copyOf(Blocks.STONE));
     public static final Item PLUTONIUM_ORE_BLOCK_ITEM = new BlockItem(PLUTONIUM_ORE_BLOCK, new FabricItemSettings());
+
+
+
+
+    private static Block registerBlock(String name, Block block) {
+        registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, new Identifier(IndustrialMod.MOD_ID, name), block);
+    }
+
+    private static Item registerBlockItem(String name, Block block) {
+        return Registry.register(Registries.ITEM, new Identifier(IndustrialMod.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings()));
+    }
+
+
+
+
+
+
 
     public static void registerAll() {
         IndustrialMod.LOGGER.info("Loading Blocks");

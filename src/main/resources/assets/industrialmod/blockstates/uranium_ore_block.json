@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "industrialmod:block/uranium_ore_block"
+      "model": "Industrialmod:block/uranium_ore_block"
     }
   }
 }
