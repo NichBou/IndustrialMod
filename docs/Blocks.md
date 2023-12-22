@@ -9,7 +9,7 @@
 ### Tank
 >Stores fluids.
 
-### Dehumidifier:
+### Dehumidifier
 >Takes water out of air. It does so quite slowly.
 
 ### Industrial Furnace

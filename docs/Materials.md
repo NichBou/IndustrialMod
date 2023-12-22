@@ -1,13 +1,9 @@
 ## Materials
 
-``Uranium:``
+### Uranium
+>Radioactive Metal. Can be enriched to use in a reactor.
 
 Can be found as an Ore. Breaking the ore drops raw uranium.
-Extraction of the raw
 
-
-
-
-
-
-``Lead:``
+### Lead
+>Very dense Metal.
