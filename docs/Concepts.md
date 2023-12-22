@@ -1,2 +1,6 @@
 ## Concepts
-``Radiation Bar(mabye like reverse hunger bar)``
+
+### Radiation Bar
+>Shows radiation sickness in HUD of player
+
+Maybe like a reverse hunger bar?

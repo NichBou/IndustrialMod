@@ -1,12 +1,14 @@
 ## Items
-``Radiadion Pills``
 
 
+### Radiation Pills
+>Iodine pills. Reduces radiation sickness of player.
 
-### Tools
+### Geiger Counter
+>Measures strength of ionizing radiation.
 
-``Geiger Counter``
+### Wrench
+>Used to configure blocks that interact with fluids.
 
-``Wrench``
-
-``Pressure Gauge``
+### Pressure Gauge
+>Used to inspect blocks that interact with fluids.
