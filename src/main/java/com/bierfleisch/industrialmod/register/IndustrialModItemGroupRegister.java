@@ -41,6 +41,7 @@ public class IndustrialModItemGroupRegister {
                 entries.add(IndustrialModRawMaterialItems.RAW_URANIUM_ITEM);
                 entries.add(IndustrialModBlockRegister.PLUTONIUM_ORE_BLOCK_ITEM);
                 entries.add(IndustrialModRawMaterialItems.RAW_PLUTONIUM_ITEM);
+                entries.add(IndustrialModRawMaterialItems.PLUTONIUM_INGOT);
             })
             .build();
 
