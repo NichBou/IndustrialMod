@@ -21,3 +21,6 @@ furnace
 
 ### Steam Turbine
 >Takes Steam and produces energy. Steam will be converted back into water, when in use.
+
+### Solar Panel
+>Creates energy, when it receives direct sunlight
