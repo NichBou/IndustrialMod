@@ -6,7 +6,7 @@
       "entries" :  [
         {
           "type" :  "minecraft:item" ,
-          "name" :  "industrialmod:raw_uranium_item"
+          "name" :  "industrialmod:uranium_block"
         }
       ],
       "conditions" :  [
@@ -14,7 +14,7 @@
     "condition" :  "minecraft:survives_explosion"
     }
     ],
-      "rolls": 3.0
+      "rolls": 1.0
     }
   ]
 }

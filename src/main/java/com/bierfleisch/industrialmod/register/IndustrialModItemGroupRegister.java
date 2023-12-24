@@ -39,6 +39,9 @@ public class IndustrialModItemGroupRegister {
             .entries((displayContext, entries) -> {
                 entries.add(IndustrialModBlockRegister.URANIUM_ORE_BLOCK_ITEM);
                 entries.add(IndustrialModRawMaterialItems.RAW_URANIUM_ITEM);
+                entries.add(IndustrialModRawMaterialItems.URANIUM_INGOT_ITEM);
+                entries.add(IndustrialModBlockRegister.URANIUM_BLOCK_ITEM);
+
                 entries.add(IndustrialModBlockRegister.PLUTONIUM_ORE_BLOCK_ITEM);
                 entries.add(IndustrialModRawMaterialItems.RAW_PLUTONIUM_ITEM);
             })

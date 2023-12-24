@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item":"industrialmod:uranium_block"
+    }
+  ],
+  "result": {
+    "item": "industrialmod:uranium_ingot_item",
+    "count": 9
+  }
+}

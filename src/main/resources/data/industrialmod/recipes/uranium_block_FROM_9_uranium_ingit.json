@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "industrialmod:uranium_ingot_item"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "industrialmod:uranium_block"
+  },
+  "show_notification": true
+}
