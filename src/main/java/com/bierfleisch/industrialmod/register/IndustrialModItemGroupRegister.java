@@ -44,9 +44,6 @@ public class IndustrialModItemGroupRegister {
             })
             .build();
 
-
-
-
     public static void registerAll() {
         Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "block_item_group"), BLOCK_ITEM_GROUP);
         Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "tool_item_group"), TOOL_ITEM_GROUP);

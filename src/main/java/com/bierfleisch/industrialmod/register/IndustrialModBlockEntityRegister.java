@@ -4,6 +4,7 @@ import com.bierfleisch.industrialmod.IndustrialMod;
 import com.bierfleisch.industrialmod.block.entity.fluid.container.tank.FluidTankBlockEntity;
 import com.bierfleisch.industrialmod.block.entity.fluid.transporter.pipe.PipeBlockEntity;
 import com.bierfleisch.industrialmod.block.entity.fluid.functional.pump.PumpBlockEntity;
+import com.bierfleisch.industrialmod.block.entity.radioactive.UraniumOreBlockEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
@@ -26,6 +27,12 @@ public class IndustrialModBlockEntityRegister {
             Registries.BLOCK_ENTITY_TYPE,
             new Identifier(IndustrialMod.MOD_ID, "tank_block_entity"),
             FabricBlockEntityTypeBuilder.create(FluidTankBlockEntity::new, IndustrialModBlockRegister.TANK_BLOCK).build()
+    );
+
+    public static final BlockEntityType<UraniumOreBlockEntity> URANIUM_ORE_BLOCK_ENTITY = Registry.register(
+            Registries.BLOCK_ENTITY_TYPE,
+            new Identifier(IndustrialMod.MOD_ID, "uranium_ore_block_entity"),
+            FabricBlockEntityTypeBuilder.create(UraniumOreBlockEntity::new, IndustrialModBlockRegister.URANIUM_ORE_BLOCK).build()
     );
 
     public static void registerAll() {

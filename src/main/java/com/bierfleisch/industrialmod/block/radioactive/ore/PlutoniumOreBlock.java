@@ -1,4 +1,4 @@
-package com.bierfleisch.industrialmod.block.ore;
+package com.bierfleisch.industrialmod.block.radioactive.ore;
 
 import net.minecraft.block.Block;
 

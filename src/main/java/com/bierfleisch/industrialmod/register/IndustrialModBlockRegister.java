@@ -4,8 +4,9 @@ import com.bierfleisch.industrialmod.IndustrialMod;
 import com.bierfleisch.industrialmod.block.fluid.container.tank.FluidTankBlock;
 import com.bierfleisch.industrialmod.block.fluid.transporter.pipe.PipeBlock;
 import com.bierfleisch.industrialmod.block.fluid.functional.pump.PumpBlock;
-import com.bierfleisch.industrialmod.block.ore.PlutoniumOreBlock;
+import com.bierfleisch.industrialmod.block.radioactive.ore.PlutoniumOreBlock;
 
+import com.bierfleisch.industrialmod.block.radioactive.ore.UraniumOreBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -27,9 +28,7 @@ public class IndustrialModBlockRegister {
     public static final Item TANK_BLOCK_ITEM = new BlockItem(TANK_BLOCK, new FabricItemSettings());
 
 
-
-    public static final Block URANIUM_ORE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.STONE));
-
+    public static final Block URANIUM_ORE_BLOCK = new UraniumOreBlock(FabricBlockSettings.copyOf(Blocks.STONE));
     public static final Item URANIUM_ORE_BLOCK_ITEM = new BlockItem(URANIUM_ORE_BLOCK, new FabricItemSettings());
 
 
