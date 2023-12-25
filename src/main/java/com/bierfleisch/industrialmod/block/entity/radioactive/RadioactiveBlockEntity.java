@@ -1,5 +1,7 @@
 package com.bierfleisch.industrialmod.block.entity.radioactive;
 
+import com.bierfleisch.industrialmod.radiation.RadiationData;
+import com.bierfleisch.industrialmod.util.IEntityDataSaver;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
@@ -31,7 +33,7 @@ public class RadioactiveBlockEntity extends BlockEntity {
 
         for (LivingEntity entity : nearbyPlayers) {
             int dist = entity.getBlockPos().getManhattanDistance(pos);
-            entity.sendMessage(Text.literal("Radiation: " + dist));
+            RadiationData.setRadiation((IEntityDataSaver) entity, dist);
         }
 
     }

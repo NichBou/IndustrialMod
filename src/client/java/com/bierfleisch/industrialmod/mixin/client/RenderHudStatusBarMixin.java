@@ -1,5 +1,6 @@
 package com.bierfleisch.industrialmod.mixin.client;
 
+import com.bierfleisch.industrialmod.util.IEntityDataSaver;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.InGameHud;
@@ -33,15 +34,17 @@ public class RenderHudStatusBarMixin {
         int x = this.scaledWidth / 2 + 10;
         int y = this.scaledHeight - 49;
 
+        int radiation = ((IEntityDataSaver)client.player).getPersistentData().getInt("radiation");
+
         if (client.player != null && client.player.isSubmergedInWater()) {
             y -= 9;
         }
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < radiation; i++) {
             drawContext.drawTexture(FULL_RADIATION, x + i * 8, y, 0, 0, 9, 9, 9, 9);
         }
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < radiation; i++) {
             drawContext.drawTexture(FULL_RADIATION, x + i * 8, y, 0, 0, 9, 9, 9, 9);
         }
     }
