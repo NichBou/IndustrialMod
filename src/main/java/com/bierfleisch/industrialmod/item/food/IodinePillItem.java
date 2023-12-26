@@ -18,7 +18,6 @@ import org.jetbrains.annotations.Nullable;
 public class IodinePillItem extends Item {
     public IodinePillItem() {
         super(new FabricItemSettings()
-
                 .food(IndustrialModFoodComponents.IODINE_PILL_FOOD_COMPONENT));
     }
 
