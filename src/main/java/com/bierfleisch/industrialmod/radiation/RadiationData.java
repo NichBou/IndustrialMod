@@ -14,7 +14,9 @@ public class RadiationData {
         NbtCompound nbt = player.getPersistentData();
         int radiation = nbt.getInt("radiation");
 
-        radiation = Math.min(radiation + amount, 10);
+        if (amount < 1) return radiation;
+
+        radiation = Math.max(Math.min(amount + radiation, 1000), 0);
 
         nbt.putInt("radiation", radiation);
         syncRadiation(radiation, (ServerPlayerEntity) player);
@@ -24,16 +26,21 @@ public class RadiationData {
     public static int setRadiation(IEntityDataSaver player, int amount) {
         NbtCompound nbt = player.getPersistentData();
 
-        nbt.putInt("radiation", amount);
-        syncRadiation(amount, (ServerPlayerEntity) player);
-        return amount;
+        // Clamp between 0-100
+        int clampedAmount = Math.max(Math.min(amount, 1000), 0);
+
+        nbt.putInt("radiation", clampedAmount);
+        syncRadiation(clampedAmount, (ServerPlayerEntity) player);
+        return clampedAmount;
     }
 
     public static int removeRadiation(IEntityDataSaver player, int amount) {
         NbtCompound nbt = player.getPersistentData();
         int radiation = nbt.getInt("radiation");
 
-        radiation = Math.max(radiation - amount, 0);
+        if (amount < 1) return radiation;
+
+        radiation = Math.max(Math.min(radiation - amount, 1000), 0);
 
         nbt.putInt("radiation", radiation);
         syncRadiation(radiation, (ServerPlayerEntity) player);

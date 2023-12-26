@@ -19,7 +19,11 @@ public class IndustrialModClient implements ClientModInitializer {
 
         ClientPlayNetworking.registerGlobalReceiver(IndustrialModNetworkPacketRegister.RADIATION_SYNC_ID, ((client, handler, buf, responseSender) -> {
             int rad = buf.readInt();
-            ((IEntityDataSaver) client.player).getPersistentData().putInt("radiation", rad);
+
+            if (client.player != null) {
+                ((IEntityDataSaver) client.player).getPersistentData().putInt("radiation", rad);
+            }
+
         }));
     }
 }

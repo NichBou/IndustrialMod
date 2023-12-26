@@ -33,7 +33,8 @@ public class RadioactiveBlockEntity extends BlockEntity {
 
         for (LivingEntity entity : nearbyPlayers) {
             int dist = entity.getBlockPos().getManhattanDistance(pos);
-            RadiationData.setRadiation((IEntityDataSaver) entity, dist);
+            int radiation = -dist + radiationStrength + 1;
+            RadiationData.addRadiation((IEntityDataSaver) entity, radiation);
         }
 
     }
