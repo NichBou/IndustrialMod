@@ -16,9 +16,7 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class RadioactiveBlockEntity extends BlockEntity {
-    private static int radiationStrength = 10;
-
+public abstract class RadioactiveBlockEntity extends BlockEntity {
     public RadioactiveBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
         super(type, pos, state);
     }
@@ -28,15 +26,19 @@ public class RadioactiveBlockEntity extends BlockEntity {
 
         List<LivingEntity> nearbyPlayers = world.getEntitiesByClass(
                 LivingEntity.class,
-                getRadiationZone(pos, radiationStrength),
+                getRadiationZone(pos, getRadiationStrength()),
                 Entity::isPlayer);
 
         for (LivingEntity entity : nearbyPlayers) {
             int dist = entity.getBlockPos().getManhattanDistance(pos);
-            int radiation = -dist + radiationStrength + 1;
+            int radiation = -dist + getRadiationStrength() + 1;
             RadiationData.addRadiation((IEntityDataSaver) entity, radiation);
         }
 
+    }
+
+    protected int getRadiationStrength() {
+        return 10;
     }
 
     private Box getRadiationZone(BlockPos pos, int radiationStrength) {
