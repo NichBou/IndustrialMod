@@ -7,5 +7,6 @@ public class IndustrialModRawMaterialItems {
     public static final Item RAW_URANIUM_ITEM = new Item(new FabricItemSettings());
     public static final Item RAW_PLUTONIUM_ITEM = new Item(new FabricItemSettings());
     public static final Item PLUTONIUM_INGOT = new Item(new FabricItemSettings());
+
 }
 

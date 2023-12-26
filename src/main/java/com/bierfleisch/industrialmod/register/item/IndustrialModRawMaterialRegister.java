@@ -14,5 +14,6 @@ public class IndustrialModRawMaterialRegister {
 
         Registry.register(Registries.ITEM, new Identifier(IndustrialMod.MOD_ID, "raw_uranium_item"), IndustrialModRawMaterialItems.RAW_URANIUM_ITEM);
         Registry.register(Registries.ITEM, new Identifier(IndustrialMod.MOD_ID, "raw_plutonium_item"), IndustrialModRawMaterialItems.RAW_PLUTONIUM_ITEM);
+        Registry.register(Registries.ITEM, new Identifier(IndustrialMod.MOD_ID, "plutonium_ingot"), IndustrialModRawMaterialItems.PLUTONIUM_INGOT);
     }
 }
