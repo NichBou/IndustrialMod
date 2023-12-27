@@ -44,11 +44,9 @@ public class IndustrialModItemGroupRegister {
 
                 entries.add(IndustrialModBlockRegister.PLUTONIUM_ORE_BLOCK_ITEM);
                 entries.add(IndustrialModRawMaterialItems.RAW_PLUTONIUM_ITEM);
+                entries.add(IndustrialModRawMaterialItems.PLUTONIUM_INGOT);
             })
             .build();
-
-
-
 
     public static void registerAll() {
         Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "block_item_group"), BLOCK_ITEM_GROUP);

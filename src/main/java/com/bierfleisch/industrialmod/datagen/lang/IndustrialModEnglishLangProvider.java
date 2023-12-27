@@ -12,5 +12,6 @@ public class IndustrialModEnglishLangProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
         translationBuilder.add(IndustrialModBlockRegister.PUMP_BLOCK, "Pump Block");
+        translationBuilder.add(IndustrialModBlockRegister.PIPE_BLOCK, "Pipe Block");
     }
 }
