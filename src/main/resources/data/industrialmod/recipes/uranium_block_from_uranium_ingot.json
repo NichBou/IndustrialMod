@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
     "#": {
@@ -12,7 +12,8 @@
     "###"
   ],
   "result": {
-    "item": "industrialmod:uranium_block"
-  },
-  "show_notification": true
+    "item": "industrialmod:uranium_block",
+    "count": 1
+  }
+
 }
