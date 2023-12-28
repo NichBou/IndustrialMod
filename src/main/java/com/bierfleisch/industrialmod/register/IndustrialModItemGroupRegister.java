@@ -41,6 +41,13 @@ public class IndustrialModItemGroupRegister {
                 entries.add(IndustrialModRawMaterialItems.RAW_URANIUM_ITEM);
                 entries.add(IndustrialModRawMaterialItems.URANIUM_INGOT_ITEM);
                 entries.add(IndustrialModBlockRegister.URANIUM_BLOCK_ITEM);
+                entries.add(IndustrialModToolItems.URANIUM_PICKAXE_ITEM);
+                entries.add(IndustrialModToolItems.URANIUM_AXE_ITEM);
+                entries.add(IndustrialModToolItems.URANIUM_SWORD_ITEM);
+                entries.add(IndustrialModToolItems.URANIUM_SHOVEL_ITEM);
+                entries.add(IndustrialModToolItems.URANIUM_HOE_ITEM);
+
+
 
                 entries.add(IndustrialModBlockRegister.PLUTONIUM_ORE_BLOCK_ITEM);
                 entries.add(IndustrialModRawMaterialItems.RAW_PLUTONIUM_ITEM);

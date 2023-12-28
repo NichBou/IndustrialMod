@@ -14,5 +14,12 @@ public class IndustrialModToolItemRegister {
 
         Registry.register(Registries.ITEM, new Identifier(IndustrialMod.MOD_ID, "pressure_gauge_item"), IndustrialModToolItems.PRESSURE_GAUGE_ITEM);
         Registry.register(Registries.ITEM, new Identifier(IndustrialMod.MOD_ID, "wrench_item"), IndustrialModToolItems.WRENCH_ITEM);
+
+
+        Registry.register(Registries.ITEM, new Identifier(IndustrialMod.MOD_ID, "uranium_pickaxe_item"), IndustrialModToolItems.URANIUM_PICKAXE_ITEM);
+        Registry.register(Registries.ITEM, new Identifier(IndustrialMod.MOD_ID, "uranium_axe_item"), IndustrialModToolItems.URANIUM_AXE_ITEM);
+        Registry.register(Registries.ITEM, new Identifier(IndustrialMod.MOD_ID, "uranium_sword_item"), IndustrialModToolItems.URANIUM_SWORD_ITEM);
+        Registry.register(Registries.ITEM, new Identifier(IndustrialMod.MOD_ID, "uranium_shovel_item"), IndustrialModToolItems.URANIUM_SHOVEL_ITEM);
+        Registry.register(Registries.ITEM, new Identifier(IndustrialMod.MOD_ID, "uranium_hoe_item"), IndustrialModToolItems.URANIUM_HOE_ITEM);
     }
 }
