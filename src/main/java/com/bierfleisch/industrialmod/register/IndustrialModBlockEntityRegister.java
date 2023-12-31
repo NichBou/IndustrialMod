@@ -42,6 +42,7 @@ public class IndustrialModBlockEntityRegister {
             FabricBlockEntityTypeBuilder.create(PlutoniumOreBlockEntity::new, IndustrialModBlockRegister.PLUTONIUM_ORE_BLOCK).build()
     );
 
+
     public static void registerAll() {
         IndustrialMod.LOGGER.info("Loading Block Entities");
     }

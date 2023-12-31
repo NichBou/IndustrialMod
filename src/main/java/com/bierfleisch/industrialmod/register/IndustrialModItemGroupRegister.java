@@ -47,11 +47,20 @@ public class IndustrialModItemGroupRegister {
                 entries.add(IndustrialModToolItems.URANIUM_SHOVEL_ITEM);
                 entries.add(IndustrialModToolItems.URANIUM_HOE_ITEM);
 
-
+                entries.add(IndustrialModBlockRegister.LEAD_ORE_BLOCK_ITEM);
+                entries.add(IndustrialModBlockRegister.LEAD_BLOCK_ITEM);
+                entries.add(IndustrialModRawMaterialItems.RAW_LEAD_ITEM);
+                entries.add(IndustrialModRawMaterialItems.LEAD_INGOT_ITEM);
+                entries.add(IndustrialModRawMaterialItems.LEAD_ROD_ITEM);
 
                 entries.add(IndustrialModBlockRegister.PLUTONIUM_ORE_BLOCK_ITEM);
                 entries.add(IndustrialModRawMaterialItems.RAW_PLUTONIUM_ITEM);
                 entries.add(IndustrialModRawMaterialItems.PLUTONIUM_INGOT);
+
+
+
+                entries.add(IndustrialModRawMaterialItems.IODINE_ITEM);
+                entries.add(IndustrialModRawMaterialItems.IODINE_PILL_ITEM);
             })
             .build();
 

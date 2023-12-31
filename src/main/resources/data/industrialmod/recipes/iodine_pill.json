@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "i": {
+      "item": "industrialmod:iodine_item"
+    },
+    "g": {
+      "item": "minecraft:glass_bottle"
+}
+  },
+  "pattern": [
+    "iii",
+    "igi",
+    "iii"
+  ],
+  "result": {
+    "item": "industrialmod:iodine_pill_item",
+    "count": 1
+  }
+
+}

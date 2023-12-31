@@ -37,6 +37,14 @@ public class IndustrialModBlockRegister {
     public static final PlutoniumOreBlock PLUTONIUM_ORE_BLOCK = new PlutoniumOreBlock(FabricBlockSettings.copyOf(Blocks.STONE));
     public static final Item PLUTONIUM_ORE_BLOCK_ITEM = new BlockItem(PLUTONIUM_ORE_BLOCK, new FabricItemSettings());
 
+
+    public static final Block LEAD_ORE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK));
+    public static final Item LEAD_ORE_BLOCK_ITEM = new BlockItem(LEAD_ORE_BLOCK, new FabricItemSettings());
+
+    public static final Block LEAD_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK));
+    public static final Item LEAD_BLOCK_ITEM = new BlockItem(LEAD_BLOCK, new FabricItemSettings());
+
+
     public static void registerAll() {
         IndustrialMod.LOGGER.info("Loading Blocks");
 
@@ -46,6 +54,8 @@ public class IndustrialModBlockRegister {
         register("uranium_ore_block", URANIUM_ORE_BLOCK, URANIUM_ORE_BLOCK_ITEM);
         register("uranium_block", URANIUM_BLOCK, URANIUM_BLOCK_ITEM);
         register("plutonium_ore_block", PLUTONIUM_ORE_BLOCK, PLUTONIUM_ORE_BLOCK_ITEM);
+        register("lead_ore_block", LEAD_ORE_BLOCK, LEAD_ORE_BLOCK_ITEM);
+        register("lead_block", LEAD_BLOCK, LEAD_BLOCK_ITEM);
     }
 
     private static void register(String path, Block block, Item blockItem) {

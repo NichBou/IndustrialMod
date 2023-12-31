@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "industrialmod:item/uranium_sword_item"
+    "layer0": "industrialmod:item/lead_rod_item"
   }
 }

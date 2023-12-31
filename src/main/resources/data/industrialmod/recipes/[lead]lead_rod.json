@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "industrialmod:lead_ingot_item"
+    },
+    {
+      "item": "industrialmod:lead_ingot_item"
+    }
+  ],
+
+  "result": {
+    "item": "industrialmod:lead_rod_item",
+    "count": 1
+  }
+
+}

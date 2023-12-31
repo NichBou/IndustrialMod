@@ -1,6 +1,7 @@
 package com.bierfleisch.industrialmod.datagen.model;
 
 import com.bierfleisch.industrialmod.item.IndustrialModToolItems;
+import com.bierfleisch.industrialmod.register.item.IndustrialModRawMaterialRegister;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -28,6 +29,9 @@ public class IndustrialModModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(IndustrialModToolItems.URANIUM_SHOVEL_ITEM, Models.HANDHELD);
         itemModelGenerator.register(IndustrialModToolItems.URANIUM_HOE_ITEM, Models.HANDHELD);
         itemModelGenerator.register(IndustrialModToolItems.URANIUM_SWORD_ITEM, Models.HANDHELD);
+
+
+
     }
 
 }
