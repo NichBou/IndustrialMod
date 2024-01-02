@@ -5,9 +5,7 @@ import com.bierfleisch.industrialmod.item.tool.WrenchItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 
-import javax.xml.namespace.QName;
-
-public class IndustrialModToolItems {
+public class ModToolItems {
     public static final PressureGaugeItem PRESSURE_GAUGE_ITEM = new PressureGaugeItem();
     public static final WrenchItem WRENCH_ITEM = new WrenchItem();
 

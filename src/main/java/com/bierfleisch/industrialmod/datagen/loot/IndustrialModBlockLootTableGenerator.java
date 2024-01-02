@@ -1,6 +1,6 @@
 package com.bierfleisch.industrialmod.datagen.loot;
 
-import com.bierfleisch.industrialmod.register.IndustrialModBlockRegister;
+import com.bierfleisch.industrialmod.block.ModBlockRegister;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 
@@ -11,6 +11,6 @@ public class IndustrialModBlockLootTableGenerator extends FabricBlockLootTablePr
 
     @Override
     public void generate() {
-        addDrop(IndustrialModBlockRegister.PUMP_BLOCK, drops(IndustrialModBlockRegister.PUMP_BLOCK_ITEM));
+        addDrop(ModBlockRegister.PUMP_BLOCK, drops(ModBlockRegister.PUMP_BLOCK_ITEM));
     }
 }

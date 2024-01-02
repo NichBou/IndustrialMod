@@ -1,9 +1,8 @@
-package com.bierfleisch.industrialmod.register;
+package com.bierfleisch.industrialmod.network.packet;
 
 import com.bierfleisch.industrialmod.IndustrialMod;
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.util.Identifier;
 
-public class IndustrialModNetworkPacketRegister {
+public class ModNetworkPacketRegister {
     public static final Identifier RADIATION_SYNC_ID = new Identifier(IndustrialMod.MOD_ID, "radiation");
 }

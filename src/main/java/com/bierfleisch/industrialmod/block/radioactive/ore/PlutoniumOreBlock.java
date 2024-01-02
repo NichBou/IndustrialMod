@@ -1,10 +1,8 @@
 package com.bierfleisch.industrialmod.block.radioactive.ore;
 
+import com.bierfleisch.industrialmod.block.entity.ModBlockEntityRegister;
 import com.bierfleisch.industrialmod.block.entity.radioactive.PlutoniumOreBlockEntity;
-import com.bierfleisch.industrialmod.block.entity.radioactive.UraniumOreBlockEntity;
 import com.bierfleisch.industrialmod.block.radioactive.RadioactiveBlock;
-import com.bierfleisch.industrialmod.register.IndustrialModBlockEntityRegister;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -27,7 +25,7 @@ public class PlutoniumOreBlock extends RadioactiveBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return validateTicker(type, IndustrialModBlockEntityRegister.PLUTONIUM_ORE_BLOCK_ENTITY,
+        return validateTicker(type, ModBlockEntityRegister.PLUTONIUM_ORE_BLOCK_ENTITY,
                 ((world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1)));
     }
 }

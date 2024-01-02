@@ -1,7 +1,6 @@
 package com.bierfleisch.industrialmod.screen;
 
 import com.bierfleisch.industrialmod.block.entity.fluid.container.FluidContainerBlockEntity;
-import com.bierfleisch.industrialmod.register.IndustrialModScreenHandlerRegister;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
@@ -17,7 +16,7 @@ public class LiquidContainerScreenHandler extends ScreenHandler {
     }
 
     public LiquidContainerScreenHandler(int syncId, PlayerInventory playerInventory, PropertyDelegate propertyDelegate) {
-        super(IndustrialModScreenHandlerRegister.LIQUID_CONTAINER_SCREEN_HANDLER, syncId);
+        super(ModScreenHandlerRegister.LIQUID_CONTAINER_SCREEN_HANDLER, syncId);
         this.propertyDelegate = propertyDelegate;
 
         this.addProperties(propertyDelegate);

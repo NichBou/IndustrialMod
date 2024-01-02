@@ -1,7 +1,6 @@
 package com.bierfleisch.industrialmod.radiation;
 
-import com.bierfleisch.industrialmod.IndustrialMod;
-import com.bierfleisch.industrialmod.register.IndustrialModNetworkPacketRegister;
+import com.bierfleisch.industrialmod.network.packet.ModNetworkPacketRegister;
 import com.bierfleisch.industrialmod.util.IEntityDataSaver;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
@@ -50,6 +49,6 @@ public class RadiationData {
     public static void syncRadiation(int radiation, ServerPlayerEntity player) {
         PacketByteBuf buffer = PacketByteBufs.create();
         buffer.writeInt(radiation);
-        ServerPlayNetworking.send(player, IndustrialModNetworkPacketRegister.RADIATION_SYNC_ID, buffer);
+        ServerPlayNetworking.send(player, ModNetworkPacketRegister.RADIATION_SYNC_ID, buffer);
     }
 }

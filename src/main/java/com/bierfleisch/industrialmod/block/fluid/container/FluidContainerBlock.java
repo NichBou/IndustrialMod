@@ -3,7 +3,7 @@ package com.bierfleisch.industrialmod.block.fluid.container;
 import com.bierfleisch.industrialmod.block.entity.fluid.container.FluidContainerBlockEntity;
 import com.bierfleisch.industrialmod.fluid.FluidType;
 import com.bierfleisch.industrialmod.fluid.BlockFluidSides;
-import com.bierfleisch.industrialmod.item.IndustrialModToolItems;
+import com.bierfleisch.industrialmod.item.ModToolItems;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
@@ -61,10 +61,10 @@ public abstract class FluidContainerBlock extends BlockWithEntity implements Blo
 
         ItemStack usedItem = player.getStackInHand(hand);
 
-        if (usedItem.isOf(IndustrialModToolItems.PRESSURE_GAUGE_ITEM)) {
+        if (usedItem.isOf(ModToolItems.PRESSURE_GAUGE_ITEM)) {
             return this.onUseWithPressureGauge(state, world, pos, player, hand, hit);
         }
-        if (usedItem.isOf(IndustrialModToolItems.WRENCH_ITEM)) {
+        if (usedItem.isOf(ModToolItems.WRENCH_ITEM)) {
             return this.onUseWithWrench(state, world, pos, player, hand, hit);
         }
 

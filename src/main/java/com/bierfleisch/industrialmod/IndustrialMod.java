@@ -1,9 +1,12 @@
 package com.bierfleisch.industrialmod;
 
-import com.bierfleisch.industrialmod.item.IndustrialModToolItems;
-import com.bierfleisch.industrialmod.register.*;
-import com.bierfleisch.industrialmod.register.item.IndustrialModRawMaterialRegister;
-import com.bierfleisch.industrialmod.register.item.IndustrialModToolItemRegister;
+import com.bierfleisch.industrialmod.block.ModBlockRegister;
+import com.bierfleisch.industrialmod.block.entity.ModBlockEntityRegister;
+import com.bierfleisch.industrialmod.entity.ModEntityRegister;
+import com.bierfleisch.industrialmod.event.ModEventRegister;
+import com.bierfleisch.industrialmod.item.ModItemRegister;
+import com.bierfleisch.industrialmod.item.group.ModItemGroupRegister;
+import com.bierfleisch.industrialmod.screen.ModScreenHandlerRegister;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -18,14 +21,13 @@ public class IndustrialMod implements ModInitializer {
     public void onInitialize() {
         LOGGER.info("Loading Industrial Mod");
 
-        IndustrialModRawMaterialRegister.registerAll();
-        IndustrialModToolItemRegister.registerAll();
-        IndustrialModBlockRegister.registerAll();
-        IndustrialModBlockEntityRegister.registerAll();
-        IndustrialModEntityRegister.registerAll();
-        IndustrialModItemGroupRegister.registerAll();
-        IndustrialModScreenHandlerRegister.registerAll();
-        IndustrialModEventRegister.registerAll();
+        ModItemRegister.registerAll();
+        ModBlockRegister.registerAll();
+        ModBlockEntityRegister.registerAll();
+        ModEntityRegister.registerAll();
+        ModItemGroupRegister.registerAll();
+        ModScreenHandlerRegister.registerAll();
+        ModEventRegister.registerAll();
 
     }
 }
