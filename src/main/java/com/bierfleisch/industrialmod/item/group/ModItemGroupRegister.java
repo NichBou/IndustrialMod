@@ -53,6 +53,14 @@ public class ModItemGroupRegister {
                 entries.add(ModItemRegister.LEAD_INGOT_ITEM);
                 entries.add(ModBlockRegister.LEAD_BLOCK_ITEM);
                 entries.add(ModItemRegister.LEAD_ROD_ITEM);
+                entries.add(ModItemRegister.LEAD_PLATE_ITEM);
+
+                entries.add(ModBlockRegister.TITANIUM_ORE_BLOCK_ITEM);
+                entries.add(ModBlockRegister.TITANIUM_BLOCK_ITEM);
+                entries.add(ModItemRegister.RAW_TITANIUM_ITEM);
+                entries.add(ModItemRegister.TITANIUM_INGOT_ITEM);
+                entries.add(ModItemRegister.TITANIUM_PLATE_ITEM);
+                entries.add(ModItemRegister.TITANIUM_ROD_ITEM);
 
                 entries.add(ModBlockRegister.PLUTONIUM_ORE_BLOCK_ITEM);
                 entries.add(ModItemRegister.RAW_PLUTONIUM_ITEM);
@@ -62,6 +70,7 @@ public class ModItemGroupRegister {
 
                 entries.add(ModItemRegister.IODINE_ITEM);
                 entries.add(ModItemRegister.IODINE_PILL_ITEM);
+                entries.add(ModBlockRegister.IODINE_BLOCK_ITEM);
             })
             .build();
 

@@ -15,7 +15,6 @@ public enum ModToolMaterial implements ToolMaterial {
 
 
 
-
     private final int mininglevel;
     private final int itemDurability;
     private final float miningSpeed;

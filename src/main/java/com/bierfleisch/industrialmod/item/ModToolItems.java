@@ -17,4 +17,5 @@ public class ModToolItems {
     public static final Item URANIUM_SWORD_ITEM = new SwordItem(ModToolMaterial.URANIUM, 6,2f, new FabricItemSettings());
     public static final Item URANIUM_HOE_ITEM = new HoeItem(ModToolMaterial.URANIUM, 0,0f, new FabricItemSettings());
 
+
 }

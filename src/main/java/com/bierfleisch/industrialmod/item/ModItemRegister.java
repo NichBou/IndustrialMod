@@ -18,6 +18,11 @@ public class ModItemRegister {
     public static final Item RAW_LEAD_ITEM = new Item(new FabricItemSettings());
     public static final Item LEAD_INGOT_ITEM = new Item(new FabricItemSettings());
     public static final Item LEAD_ROD_ITEM = new Item(new FabricItemSettings());
+    public static final Item LEAD_PLATE_ITEM = new Item(new FabricItemSettings());
+    public static final Item RAW_TITANIUM_ITEM = new Item(new FabricItemSettings());
+    public static final Item TITANIUM_INGOT_ITEM = new Item(new FabricItemSettings());
+    public static final Item TITANIUM_PLATE_ITEM = new Item(new FabricItemSettings());
+    public static final Item TITANIUM_ROD_ITEM = new Item(new FabricItemSettings());
 
     public static void registerAll() {
         IndustrialMod.LOGGER.info("Loading Items");
@@ -31,9 +36,16 @@ public class ModItemRegister {
         registerItem("raw_lead_item", ModItemRegister.RAW_LEAD_ITEM);
         registerItem("lead_ingot_item", ModItemRegister.LEAD_INGOT_ITEM);
         registerItem("lead_rod_item", ModItemRegister.LEAD_ROD_ITEM);
+        registerItem("lead_plate_item", ModItemRegister.LEAD_PLATE_ITEM);
 
         registerItem("pressure_gauge_item", ModToolItems.PRESSURE_GAUGE_ITEM);
         registerItem("wrench_item", ModToolItems.WRENCH_ITEM);
+
+        registerItem("raw_titanium_item", ModItemRegister.RAW_TITANIUM_ITEM);
+        registerItem("titanium_ingot_item", ModItemRegister.TITANIUM_INGOT_ITEM);
+        registerItem("titanium_plate_item", ModItemRegister.TITANIUM_PLATE_ITEM);
+        registerItem("titanium_rod_item", ModItemRegister.TITANIUM_ROD_ITEM);
+
 
         registerItem("raw_uranium_item", ModItemRegister.RAW_URANIUM_ITEM);
         registerItem("uranium_ingot_item", ModItemRegister.URANIUM_INGOT_ITEM);
