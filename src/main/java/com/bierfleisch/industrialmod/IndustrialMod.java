@@ -1,5 +1,6 @@
 package com.bierfleisch.industrialmod;
 
+import com.bierfleisch.industrialmod.fluid.ModFluids;
 import com.bierfleisch.industrialmod.item.IndustrialModToolItems;
 import com.bierfleisch.industrialmod.register.*;
 import com.bierfleisch.industrialmod.register.item.IndustrialModRawMaterialRegister;
@@ -26,6 +27,8 @@ public class IndustrialMod implements ModInitializer {
         IndustrialModItemGroupRegister.registerAll();
         IndustrialModScreenHandlerRegister.registerAll();
         IndustrialModEventRegister.registerAll();
+
+        ModFluids.register();
 
     }
 }
