@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "l": {
+      "item": "minecraft:stick"
+    },
+    "u": {
+      "item": "industrialmod:titanium_ingot_item"
+}
+  },
+  "pattern": [
+    "uuu",
+    " l ",
+    " l "
+  ],
+  "result": {
+    "item": "industrialmod:titanium_pickaxe_item"
+  },
+  "show_notification": true
+}

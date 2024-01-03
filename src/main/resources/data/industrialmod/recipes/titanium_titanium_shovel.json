@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "l": {
+      "item": "minecraft:stick"
+    },
+    "u": {
+      "item": "industrialmod:titanium_ingot_item"
+}
+  },
+  "pattern": [
+    "u",
+    "l",
+    "l"
+  ],
+  "result": {
+    "item": "industrialmod:titanium_shovel_item"
+  },
+  "show_notification": true
+}

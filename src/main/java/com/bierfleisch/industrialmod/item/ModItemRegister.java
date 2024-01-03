@@ -45,6 +45,11 @@ public class ModItemRegister {
         registerItem("titanium_ingot_item", ModItemRegister.TITANIUM_INGOT_ITEM);
         registerItem("titanium_plate_item", ModItemRegister.TITANIUM_PLATE_ITEM);
         registerItem("titanium_rod_item", ModItemRegister.TITANIUM_ROD_ITEM);
+        registerItem("titanium_pickaxe_item", ModToolItems.TITANIUM_PICKAXE_ITEM);
+        registerItem("titanium_axe_item", ModToolItems.TITANIUM_AXE_ITEM);
+        registerItem("titanium_sword_item", ModToolItems.TITANIUM_SWORD_ITEM);
+        registerItem("titanium_shovel_item", ModToolItems.TITANIUM_SHOVEL_ITEM);
+        registerItem("titanium_hoe_item", ModToolItems.TITANIUM_HOE_ITEM);
 
 
         registerItem("raw_uranium_item", ModItemRegister.RAW_URANIUM_ITEM);

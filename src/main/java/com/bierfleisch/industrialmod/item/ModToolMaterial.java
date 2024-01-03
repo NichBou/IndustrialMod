@@ -8,11 +8,10 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
     URANIUM(MiningLevels.IRON,650,4.5f,3.5f,26,
-            ()->Ingredient.ofItems(ModItemRegister.URANIUM_INGOT_ITEM));
-
-
-
-
+            ()->Ingredient.ofItems(ModItemRegister.URANIUM_INGOT_ITEM)),
+    TITANIUM(MiningLevels.IRON, 650, 4.5f, 3.5f, 26,
+            ()->Ingredient.ofItems(ModItemRegister.TITANIUM_INGOT_ITEM))
+    ;
 
 
     private final int mininglevel;
@@ -30,6 +29,9 @@ public enum ModToolMaterial implements ToolMaterial {
         this.enchantability = enchantability;
         this.repairIngredient = repairIngredient;
     }
+
+
+
 
     @Override
     public int getDurability() {

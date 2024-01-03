@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item":"industrialmod:titanium_block"
+    }
+  ],
+  "result": {
+    "item": "industrialmod:titanium_ingot_item",
+    "count": 9
+  }
+}

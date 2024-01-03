@@ -18,4 +18,12 @@ public class ModToolItems {
     public static final Item URANIUM_HOE_ITEM = new HoeItem(ModToolMaterial.URANIUM, 0,0f, new FabricItemSettings());
 
 
+
+    public static final Item TITANIUM_PICKAXE_ITEM = new PickaxeItem(ModToolMaterial.TITANIUM, 2,2f, new FabricItemSettings());
+    public static final Item TITANIUM_AXE_ITEM = new AxeItem(ModToolMaterial.TITANIUM, 2,2f, new FabricItemSettings());
+    public static final Item TITANIUM_SHOVEL_ITEM = new ShovelItem(ModToolMaterial.TITANIUM, 2,2f, new FabricItemSettings());
+    public static final Item TITANIUM_SWORD_ITEM = new SwordItem(ModToolMaterial.TITANIUM, 6,2f, new FabricItemSettings());
+    public static final Item TITANIUM_HOE_ITEM = new HoeItem(ModToolMaterial.TITANIUM, 0,0f, new FabricItemSettings());
+
+
 }

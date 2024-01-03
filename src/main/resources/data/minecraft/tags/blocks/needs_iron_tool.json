@@ -5,6 +5,8 @@
     "industrialmod:uranium_block",
     "industrialmod:plutonium_ore_block",
     "industrialmod:lead_block",
-    "industrialmod:lead_ore_block"
+    "industrialmod:lead_ore_block",
+    "industrialmod:titanium_block",
+    "industrialmod:titanium_ore_block"
   ]
 }

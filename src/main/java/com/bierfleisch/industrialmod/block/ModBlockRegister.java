@@ -51,7 +51,7 @@ public class ModBlockRegister {
     public static final Block TITANIUM_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK));
     public static final Item TITANIUM_BLOCK_ITEM = new BlockItem(TITANIUM_BLOCK, new FabricItemSettings());
 
-    public static final Block IODINE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK));
+    public static final Block IODINE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK));
     public static final Item IODINE_BLOCK_ITEM = new BlockItem(IODINE_BLOCK, new FabricItemSettings());
     public static void registerAll() {
         IndustrialMod.LOGGER.info("Loading Blocks");
