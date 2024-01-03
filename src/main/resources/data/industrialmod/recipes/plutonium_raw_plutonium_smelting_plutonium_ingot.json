@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 500,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "industrialmod:raw_plutonium_item"
+  },
+  "result": "industrialmod:plutonium_ingot_item"
+}

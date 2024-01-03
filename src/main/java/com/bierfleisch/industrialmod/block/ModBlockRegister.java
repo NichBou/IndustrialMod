@@ -37,6 +37,8 @@ public class ModBlockRegister {
     public static final PlutoniumOreBlock PLUTONIUM_ORE_BLOCK = new PlutoniumOreBlock(FabricBlockSettings.copyOf(Blocks.STONE));
     public static final Item PLUTONIUM_ORE_BLOCK_ITEM = new BlockItem(PLUTONIUM_ORE_BLOCK, new FabricItemSettings());
 
+    public static final Block PLUTONIUM_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK));
+    public static final Item PLUTONIUM_BLOCK_ITEM = new BlockItem(PLUTONIUM_BLOCK, new FabricItemSettings());
 
     public static final Block LEAD_ORE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK));
     public static final Item LEAD_ORE_BLOCK_ITEM = new BlockItem(LEAD_ORE_BLOCK, new FabricItemSettings());
@@ -68,6 +70,7 @@ public class ModBlockRegister {
         registerBlock("uranium_ore_block", URANIUM_ORE_BLOCK, URANIUM_ORE_BLOCK_ITEM);
         registerBlock("uranium_block", URANIUM_BLOCK, URANIUM_BLOCK_ITEM);
         registerBlock("plutonium_ore_block", PLUTONIUM_ORE_BLOCK, PLUTONIUM_ORE_BLOCK_ITEM);
+        registerBlock("plutonium_block", PLUTONIUM_BLOCK, PLUTONIUM_BLOCK_ITEM);
         registerBlock("lead_ore_block", LEAD_ORE_BLOCK, LEAD_ORE_BLOCK_ITEM);
         registerBlock("lead_block", LEAD_BLOCK, LEAD_BLOCK_ITEM);
         registerBlock("lead_plate_block", LEAD_PLATE_BLOCK, LEAD_PLATE_BLOCK_ITEM);

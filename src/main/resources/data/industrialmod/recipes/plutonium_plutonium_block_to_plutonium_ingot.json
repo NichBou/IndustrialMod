@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item":"industrialmod:plutonium_block"
+    }
+  ],
+  "result": {
+    "item": "industrialmod:plutonium_ingot_item",
+    "count": 9
+  }
+}

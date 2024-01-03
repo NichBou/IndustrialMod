@@ -12,7 +12,7 @@ public class ModItemRegister {
     public static final Item RAW_URANIUM_ITEM = new Item(new FabricItemSettings());
     public static final Item RAW_PLUTONIUM_ITEM = new Item(new FabricItemSettings());
     public static final Item URANIUM_INGOT_ITEM = new Item(new FabricItemSettings());
-    public static final Item PLUTONIUM_INGOT = new Item(new FabricItemSettings());
+    public static final Item PLUTONIUM_INGOT_ITEM = new Item(new FabricItemSettings());
     public static final IodinePillItem IODINE_PILL_ITEM = new IodinePillItem();
     public static final Item IODINE_ITEM = new Item(new FabricItemSettings());
     public static final Item RAW_LEAD_ITEM = new Item(new FabricItemSettings());
@@ -28,7 +28,7 @@ public class ModItemRegister {
         IndustrialMod.LOGGER.info("Loading Items");
 
         registerItem("raw_plutonium_item", ModItemRegister.RAW_PLUTONIUM_ITEM);
-        registerItem("plutonium_ingot", ModItemRegister.PLUTONIUM_INGOT);
+        registerItem("plutonium_ingot_item", ModItemRegister.PLUTONIUM_INGOT_ITEM);
 
         registerItem("iodine_pill_item", ModItemRegister.IODINE_PILL_ITEM);
         registerItem("iodine_item", ModItemRegister.IODINE_ITEM);

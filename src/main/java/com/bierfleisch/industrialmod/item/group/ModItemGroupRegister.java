@@ -71,8 +71,8 @@ public class ModItemGroupRegister {
 
                 entries.add(ModBlockRegister.PLUTONIUM_ORE_BLOCK_ITEM);
                 entries.add(ModItemRegister.RAW_PLUTONIUM_ITEM);
-                entries.add(ModItemRegister.PLUTONIUM_INGOT);
-
+                entries.add(ModItemRegister.PLUTONIUM_INGOT_ITEM);
+                entries.add(ModBlockRegister.PLUTONIUM_BLOCK_ITEM);
 
 
                 entries.add(ModItemRegister.IODINE_ITEM);
