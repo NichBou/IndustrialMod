@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item":"industrialmod:titanium_plate_block"
+    }
+  ],
+  "result": {
+    "item": "industrialmod:titanium_plate_item",
+    "count": 9
+  }
+}

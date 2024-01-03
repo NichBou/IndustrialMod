@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "industrialmod:block/lead_plate_block"
+  }
+}

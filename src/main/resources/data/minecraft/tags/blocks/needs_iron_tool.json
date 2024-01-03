@@ -7,6 +7,8 @@
     "industrialmod:lead_block",
     "industrialmod:lead_ore_block",
     "industrialmod:titanium_block",
-    "industrialmod:titanium_ore_block"
+    "industrialmod:titanium_ore_block",
+    "industrialmod:titanium_plate_block",
+    "industrialmod:lead_plate_block"
   ]
 }

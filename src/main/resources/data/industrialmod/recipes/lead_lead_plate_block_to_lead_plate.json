@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item":"industrialmod:lead_plate_block"
+    }
+  ],
+  "result": {
+    "item": "industrialmod:lead_plate_item",
+    "count": 9
+  }
+}

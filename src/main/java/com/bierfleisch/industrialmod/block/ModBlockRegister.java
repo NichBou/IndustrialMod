@@ -44,12 +44,18 @@ public class ModBlockRegister {
     public static final Block LEAD_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK));
     public static final Item LEAD_BLOCK_ITEM = new BlockItem(LEAD_BLOCK, new FabricItemSettings());
 
+    public static final Block LEAD_PLATE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK));
+    public static final Item LEAD_PLATE_BLOCK_ITEM = new BlockItem(LEAD_PLATE_BLOCK, new FabricItemSettings());
+
 
     public static final Block TITANIUM_ORE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK));
     public static final Item TITANIUM_ORE_BLOCK_ITEM = new BlockItem(TITANIUM_ORE_BLOCK, new FabricItemSettings());
 
     public static final Block TITANIUM_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK));
     public static final Item TITANIUM_BLOCK_ITEM = new BlockItem(TITANIUM_BLOCK, new FabricItemSettings());
+
+    public static final Block TITANIUM_PLATE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK));
+    public static final Item TITANIUM_PLATE_BLOCK_ITEM = new BlockItem(TITANIUM_PLATE_BLOCK, new FabricItemSettings());
 
     public static final Block IODINE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK));
     public static final Item IODINE_BLOCK_ITEM = new BlockItem(IODINE_BLOCK, new FabricItemSettings());
@@ -64,8 +70,10 @@ public class ModBlockRegister {
         registerBlock("plutonium_ore_block", PLUTONIUM_ORE_BLOCK, PLUTONIUM_ORE_BLOCK_ITEM);
         registerBlock("lead_ore_block", LEAD_ORE_BLOCK, LEAD_ORE_BLOCK_ITEM);
         registerBlock("lead_block", LEAD_BLOCK, LEAD_BLOCK_ITEM);
+        registerBlock("lead_plate_block", LEAD_PLATE_BLOCK, LEAD_PLATE_BLOCK_ITEM);
         registerBlock("titanium_ore_block", TITANIUM_ORE_BLOCK, TITANIUM_ORE_BLOCK_ITEM);
         registerBlock("titanium_block", TITANIUM_BLOCK, TITANIUM_BLOCK_ITEM);
+        registerBlock("titanium_plate_block", TITANIUM_PLATE_BLOCK, TITANIUM_PLATE_BLOCK_ITEM);
         registerBlock("iodine_block", IODINE_BLOCK, IODINE_BLOCK_ITEM);
     }
 
