@@ -38,16 +38,11 @@ public class ModItemGroupRegister {
             .icon(() -> new ItemStack(ModItemRegister.RAW_URANIUM_ITEM))
             .displayName(Text.translatable("itemGroup." + IndustrialMod.MOD_ID + ".uranium_item_group"))
             .entries((displayContext, entries) -> {
+
                 entries.add(ModBlockRegister.URANIUM_ORE_BLOCK_ITEM);
                 entries.add(ModItemRegister.RAW_URANIUM_ITEM);
                 entries.add(ModItemRegister.URANIUM_INGOT_ITEM);
                 entries.add(ModBlockRegister.URANIUM_BLOCK_ITEM);
-                entries.add(ModToolItems.URANIUM_PICKAXE_ITEM);
-                entries.add(ModToolItems.URANIUM_AXE_ITEM);
-                entries.add(ModToolItems.URANIUM_SWORD_ITEM);
-                entries.add(ModToolItems.URANIUM_SHOVEL_ITEM);
-                entries.add(ModToolItems.URANIUM_HOE_ITEM);
-
 
                 entries.add(ModBlockRegister.LEAD_ORE_BLOCK_ITEM);
                 entries.add(ModItemRegister.RAW_LEAD_ITEM);
@@ -64,32 +59,65 @@ public class ModItemGroupRegister {
                 entries.add(ModItemRegister.TITANIUM_PLATE_ITEM);
                 entries.add(ModBlockRegister.TITANIUM_PLATE_BLOCK_ITEM);
                 entries.add(ModItemRegister.TITANIUM_ROD_ITEM);
-                entries.add(ModToolItems.TITANIUM_PICKAXE_ITEM);
-                entries.add(ModToolItems.TITANIUM_AXE_ITEM);
-                entries.add(ModToolItems.TITANIUM_SWORD_ITEM);
-                entries.add(ModToolItems.TITANIUM_SHOVEL_ITEM);
-                entries.add(ModToolItems.TITANIUM_HOE_ITEM);
 
                 entries.add(ModBlockRegister.PLUTONIUM_ORE_BLOCK_ITEM);
                 entries.add(ModItemRegister.RAW_PLUTONIUM_ITEM);
                 entries.add(ModItemRegister.PLUTONIUM_INGOT_ITEM);
                 entries.add(ModBlockRegister.PLUTONIUM_BLOCK_ITEM);
+
+                entries.add(ModItemRegister.IODINE_ITEM);
+                entries.add(ModBlockRegister.IODINE_BLOCK_ITEM);
+                entries.add(ModItemRegister.IODINE_PILL_ITEM);
+
+            })
+            .build();
+
+    public static final ItemGroup TOOL_GROUP = FabricItemGroup.builder()
+            .icon(() -> new ItemStack(ModToolItems.URANIUM_PICKAXE_ITEM))
+            .displayName(Text.translatable("itemGroup." + IndustrialMod.MOD_ID + ".tool_item_group"))
+            .entries((displayContext, entries) -> {
+
+                entries.add(ModToolItems.URANIUM_PICKAXE_ITEM);
+                entries.add(ModToolItems.URANIUM_AXE_ITEM);
+                entries.add(ModToolItems.URANIUM_SWORD_ITEM);
+                entries.add(ModToolItems.URANIUM_SHOVEL_ITEM);
+                entries.add(ModToolItems.URANIUM_HOE_ITEM);
+
                 entries.add(ModToolItems.PLUTONIUM_PICKAXE_ITEM);
                 entries.add(ModToolItems.PLUTONIUM_AXE_ITEM);
                 entries.add(ModToolItems.PLUTONIUM_SWORD_ITEM);
                 entries.add(ModToolItems.PLUTONIUM_SHOVEL_ITEM);
                 entries.add(ModToolItems.PLUTONIUM_HOE_ITEM);
 
+                entries.add(ModToolItems.TITANIUM_PICKAXE_ITEM);
+                entries.add(ModToolItems.TITANIUM_AXE_ITEM);
+                entries.add(ModToolItems.TITANIUM_SWORD_ITEM);
+                entries.add(ModToolItems.TITANIUM_SHOVEL_ITEM);
+                entries.add(ModToolItems.TITANIUM_HOE_ITEM);
 
-                entries.add(ModItemRegister.IODINE_ITEM);
-                entries.add(ModItemRegister.IODINE_PILL_ITEM);
-                entries.add(ModBlockRegister.IODINE_BLOCK_ITEM);
             })
             .build();
+
+    public static final ItemGroup ARMOR_GROUP = FabricItemGroup.builder()
+            .icon(() -> new ItemStack(ModToolItems.LEAD_CHESTPLATE_ITEM))
+            .displayName(Text.translatable("itemGroup." + IndustrialMod.MOD_ID + ".armor_item_group"))
+            .entries((displayContext, entries) -> {
+
+                entries.add(ModToolItems.LEAD_HELMET_ITEM);
+                entries.add(ModToolItems.LEAD_CHESTPLATE_ITEM);
+                entries.add(ModToolItems.LEAD_LEGGINGS_ITEM);
+                entries.add(ModToolItems.LEAD_BOOTS_ITEM);
+
+
+            })
+            .build();
+
 
     public static void registerAll() {
         Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "block_item_group"), BLOCK_ITEM_GROUP);
         Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "tool_item_group"), TOOL_ITEM_GROUP);
         Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "uranium_item_group"), URANIUM_GROUP);
+        Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "tool_group"), TOOL_GROUP);
+        Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "armor_item_group"), ARMOR_GROUP);
     }
 }
