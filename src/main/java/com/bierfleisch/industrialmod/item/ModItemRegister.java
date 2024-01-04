@@ -3,6 +3,7 @@ package com.bierfleisch.industrialmod.item;
 import com.bierfleisch.industrialmod.IndustrialMod;
 import com.bierfleisch.industrialmod.item.food.IodinePillItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -24,6 +25,7 @@ public class ModItemRegister {
     public static final Item TITANIUM_PLATE_ITEM = new Item(new FabricItemSettings());
     public static final Item TITANIUM_ROD_ITEM = new Item(new FabricItemSettings());
 
+
     public static void registerAll() {
         IndustrialMod.LOGGER.info("Loading Items");
 
@@ -37,6 +39,10 @@ public class ModItemRegister {
         registerItem("lead_ingot_item", ModItemRegister.LEAD_INGOT_ITEM);
         registerItem("lead_rod_item", ModItemRegister.LEAD_ROD_ITEM);
         registerItem("lead_plate_item", ModItemRegister.LEAD_PLATE_ITEM);
+        registerItem("lead_helmet_item", ModToolItems.LEAD_HELMET_ITEM);
+        registerItem("lead_chestplate_item", ModToolItems.LEAD_CHESTPLATE_ITEM);
+        registerItem("lead_leggings_item", ModToolItems.LEAD_LEGGINGS_ITEM);
+        registerItem("lead_boots_item", ModToolItems.LEAD_BOOTS_ITEM);
 
         registerItem("pressure_gauge_item", ModToolItems.PRESSURE_GAUGE_ITEM);
         registerItem("wrench_item", ModToolItems.WRENCH_ITEM);
