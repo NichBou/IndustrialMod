@@ -108,6 +108,12 @@ public class ModItemGroupRegister {
                 entries.add(ModToolItems.LEAD_LEGGINGS_ITEM);
                 entries.add(ModToolItems.LEAD_BOOTS_ITEM);
 
+                entries.add(ModToolItems.TITANIUM_HELMET_ITEM);
+                entries.add(ModToolItems.TITANIUM_CHESTPLATE_ITEM);
+                entries.add(ModToolItems.TITANIUM_LEGGINGS_ITEM);
+                entries.add(ModToolItems.TITANIUM_BOOTS_ITEM);
+
+
 
             })
             .build();
@@ -116,8 +122,10 @@ public class ModItemGroupRegister {
     public static void registerAll() {
         Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "block_item_group"), BLOCK_ITEM_GROUP);
         Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "tool_item_group"), TOOL_ITEM_GROUP);
+
         Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "uranium_item_group"), URANIUM_GROUP);
         Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "tool_group"), TOOL_GROUP);
         Registry.register(Registries.ITEM_GROUP, new Identifier(IndustrialMod.MOD_ID, "armor_item_group"), ARMOR_GROUP);
+
     }
 }

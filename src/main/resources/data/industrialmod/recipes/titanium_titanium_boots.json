@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "l": {
+      "item": "industrialmod:titanium_plate_item"
+    },
+    "u": {
+      "item": "industrialmod:lead_boots_item"
+}
+  },
+  "pattern": [
+    "lll",
+    "lul",
+    "lll"
+  ],
+  "result": {
+    "item": "industrialmod:titanium_boots_item"
+  },
+  "show_notification": true
+}

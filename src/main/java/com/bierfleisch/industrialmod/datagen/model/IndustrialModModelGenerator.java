@@ -34,6 +34,11 @@ public class IndustrialModModelGenerator extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) ModToolItems.LEAD_LEGGINGS_ITEM));
         itemModelGenerator.registerArmor(((ArmorItem) ModToolItems.LEAD_BOOTS_ITEM));
 
+        itemModelGenerator.registerArmor(((ArmorItem) ModToolItems.TITANIUM_HELMET_ITEM));
+        itemModelGenerator.registerArmor(((ArmorItem) ModToolItems.TITANIUM_CHESTPLATE_ITEM));
+        itemModelGenerator.registerArmor(((ArmorItem) ModToolItems.TITANIUM_LEGGINGS_ITEM));
+        itemModelGenerator.registerArmor(((ArmorItem) ModToolItems.TITANIUM_BOOTS_ITEM));
+
 
         itemModelGenerator.register(ModToolItems.PLUTONIUM_PICKAXE_ITEM, Models.HANDHELD);
 

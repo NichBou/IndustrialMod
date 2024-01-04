@@ -17,6 +17,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     protected void configure(RegistryWrapper.WrapperLookup arg) {
     getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
-            .add(ModToolItems.LEAD_HELMET_ITEM, ModToolItems.LEAD_CHESTPLATE_ITEM, ModToolItems.LEAD_LEGGINGS_ITEM, ModToolItems.LEAD_BOOTS_ITEM);
+            .add(ModToolItems.TITANIUM_HELMET_ITEM, ModToolItems.TITANIUM_CHESTPLATE_ITEM, ModToolItems.TITANIUM_LEGGINGS_ITEM, ModToolItems.TITANIUM_BOOTS_ITEM);
     }
 }

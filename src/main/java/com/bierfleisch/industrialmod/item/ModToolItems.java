@@ -35,4 +35,9 @@ public class ModToolItems {
     public static final Item LEAD_LEGGINGS_ITEM = new ArmorItem(ModArmorMaterial.LEAD, ArmorItem.Type.LEGGINGS, new FabricItemSettings());
     public static final Item LEAD_BOOTS_ITEM = new ArmorItem(ModArmorMaterial.LEAD, ArmorItem.Type.BOOTS, new FabricItemSettings());
 
+    public static final Item TITANIUM_HELMET_ITEM = new ArmorItem(ModArmorMaterial.TITANIUM, ArmorItem.Type.HELMET, new FabricItemSettings());
+    public static final Item TITANIUM_CHESTPLATE_ITEM = new ArmorItem(ModArmorMaterial.TITANIUM, ArmorItem.Type.CHESTPLATE, new FabricItemSettings());
+    public static final Item TITANIUM_LEGGINGS_ITEM = new ArmorItem(ModArmorMaterial.TITANIUM, ArmorItem.Type.LEGGINGS, new FabricItemSettings());
+    public static final Item TITANIUM_BOOTS_ITEM = new ArmorItem(ModArmorMaterial.TITANIUM, ArmorItem.Type.BOOTS, new FabricItemSettings());
+
 }

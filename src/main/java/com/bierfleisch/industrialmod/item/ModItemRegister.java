@@ -56,6 +56,10 @@ public class ModItemRegister {
         registerItem("titanium_sword_item", ModToolItems.TITANIUM_SWORD_ITEM);
         registerItem("titanium_shovel_item", ModToolItems.TITANIUM_SHOVEL_ITEM);
         registerItem("titanium_hoe_item", ModToolItems.TITANIUM_HOE_ITEM);
+        registerItem("titanium_helmet_item", ModToolItems.TITANIUM_HELMET_ITEM);
+        registerItem("titanium_chestplate_item", ModToolItems.TITANIUM_CHESTPLATE_ITEM);
+        registerItem("titanium_leggings_item", ModToolItems.TITANIUM_LEGGINGS_ITEM);
+        registerItem("titanium_boots_item", ModToolItems.TITANIUM_BOOTS_ITEM);
 
         registerItem("plutonium_pickaxe_item", ModToolItems.PLUTONIUM_PICKAXE_ITEM);
         registerItem("plutonium_axe_item", ModToolItems.PLUTONIUM_AXE_ITEM);
