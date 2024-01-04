@@ -51,6 +51,11 @@ public class ModItemRegister {
         registerItem("titanium_shovel_item", ModToolItems.TITANIUM_SHOVEL_ITEM);
         registerItem("titanium_hoe_item", ModToolItems.TITANIUM_HOE_ITEM);
 
+        registerItem("plutonium_pickaxe_item", ModToolItems.PLUTONIUM_PICKAXE_ITEM);
+        registerItem("plutonium_axe_item", ModToolItems.PLUTONIUM_AXE_ITEM);
+        registerItem("plutonium_sword_item", ModToolItems.PLUTONIUM_SWORD_ITEM);
+        registerItem("plutonium_shovel_item", ModToolItems.PLUTONIUM_SHOVEL_ITEM);
+        registerItem("plutonium_hoe_item", ModToolItems.PLUTONIUM_HOE_ITEM);
 
         registerItem("raw_uranium_item", ModItemRegister.RAW_URANIUM_ITEM);
         registerItem("uranium_ingot_item", ModItemRegister.URANIUM_INGOT_ITEM);

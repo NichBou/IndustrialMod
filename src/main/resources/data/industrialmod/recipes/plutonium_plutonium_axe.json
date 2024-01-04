@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "l": {
+      "item": "industrialmod:titanium_rod_item"
+    },
+    "u": {
+      "item": "industrialmod:plutonium_ingot_item"
+}
+  },
+  "pattern": [
+    "uu",
+    "ul",
+    " l"
+  ],
+  "result": {
+    "item": "industrialmod:plutonium_axe_item"
+  },
+  "show_notification": true
+}

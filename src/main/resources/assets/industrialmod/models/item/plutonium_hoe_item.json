@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "industrialmod:item/plutonium_hoe_item"
+  }
+}

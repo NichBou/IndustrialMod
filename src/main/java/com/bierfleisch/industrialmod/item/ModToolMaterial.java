@@ -9,6 +9,8 @@ import java.util.function.Supplier;
 public enum ModToolMaterial implements ToolMaterial {
     URANIUM(MiningLevels.IRON,650,4.5f,3.5f,26,
             ()->Ingredient.ofItems(ModItemRegister.URANIUM_INGOT_ITEM)),
+    PLUTONIUM(MiningLevels.IRON,650,4.5f,3.5f,26,
+            ()->Ingredient.ofItems(ModItemRegister.PLUTONIUM_INGOT_ITEM)),
     TITANIUM(MiningLevels.IRON, 650, 4.5f, 3.5f, 26,
             ()->Ingredient.ofItems(ModItemRegister.TITANIUM_INGOT_ITEM))
     ;

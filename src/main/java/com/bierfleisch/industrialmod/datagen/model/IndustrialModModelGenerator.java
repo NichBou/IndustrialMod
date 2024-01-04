@@ -28,7 +28,7 @@ public class IndustrialModModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(ModToolItems.URANIUM_HOE_ITEM, Models.HANDHELD);
         itemModelGenerator.register(ModToolItems.URANIUM_SWORD_ITEM, Models.HANDHELD);
 
-
+        itemModelGenerator.register(ModToolItems.PLUTONIUM_PICKAXE_ITEM, Models.HANDHELD);
 
     }
 

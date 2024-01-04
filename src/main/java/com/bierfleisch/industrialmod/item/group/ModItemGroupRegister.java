@@ -48,6 +48,7 @@ public class ModItemGroupRegister {
                 entries.add(ModToolItems.URANIUM_SHOVEL_ITEM);
                 entries.add(ModToolItems.URANIUM_HOE_ITEM);
 
+
                 entries.add(ModBlockRegister.LEAD_ORE_BLOCK_ITEM);
                 entries.add(ModItemRegister.RAW_LEAD_ITEM);
                 entries.add(ModItemRegister.LEAD_INGOT_ITEM);
@@ -73,6 +74,11 @@ public class ModItemGroupRegister {
                 entries.add(ModItemRegister.RAW_PLUTONIUM_ITEM);
                 entries.add(ModItemRegister.PLUTONIUM_INGOT_ITEM);
                 entries.add(ModBlockRegister.PLUTONIUM_BLOCK_ITEM);
+                entries.add(ModToolItems.PLUTONIUM_PICKAXE_ITEM);
+                entries.add(ModToolItems.PLUTONIUM_AXE_ITEM);
+                entries.add(ModToolItems.PLUTONIUM_SWORD_ITEM);
+                entries.add(ModToolItems.PLUTONIUM_SHOVEL_ITEM);
+                entries.add(ModToolItems.PLUTONIUM_HOE_ITEM);
 
 
                 entries.add(ModItemRegister.IODINE_ITEM);

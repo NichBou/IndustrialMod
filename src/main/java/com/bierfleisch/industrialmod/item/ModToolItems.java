@@ -17,7 +17,11 @@ public class ModToolItems {
     public static final Item URANIUM_SWORD_ITEM = new SwordItem(ModToolMaterial.URANIUM, 6,2f, new FabricItemSettings());
     public static final Item URANIUM_HOE_ITEM = new HoeItem(ModToolMaterial.URANIUM, 0,0f, new FabricItemSettings());
 
-
+    public static final Item PLUTONIUM_PICKAXE_ITEM = new PickaxeItem(ModToolMaterial.PLUTONIUM, 2,2f, new FabricItemSettings());
+    public static final Item PLUTONIUM_AXE_ITEM = new AxeItem(ModToolMaterial.PLUTONIUM, 2,2f, new FabricItemSettings());
+    public static final Item PLUTONIUM_SWORD_ITEM = new SwordItem(ModToolMaterial.PLUTONIUM, 6,2f, new FabricItemSettings());
+    public static final Item PLUTONIUM_SHOVEL_ITEM = new ShovelItem(ModToolMaterial.PLUTONIUM, 2,2f, new FabricItemSettings());
+    public static final Item PLUTONIUM_HOE_ITEM = new HoeItem(ModToolMaterial.PLUTONIUM, 0,0f, new FabricItemSettings());
 
     public static final Item TITANIUM_PICKAXE_ITEM = new PickaxeItem(ModToolMaterial.TITANIUM, 2,2f, new FabricItemSettings());
     public static final Item TITANIUM_AXE_ITEM = new AxeItem(ModToolMaterial.TITANIUM, 2,2f, new FabricItemSettings());
