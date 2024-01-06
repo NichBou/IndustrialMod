@@ -9,7 +9,7 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.network.ServerPlayerEntity;
 
 public class RadiationData {
-    public static final int maxRadiation = 10000;
+    public static final int maxRadiation = 12000;
 
     public static int addRadiation(IEntityDataSaver player, int amount) {
         NbtCompound nbt = player.getPersistentData();
