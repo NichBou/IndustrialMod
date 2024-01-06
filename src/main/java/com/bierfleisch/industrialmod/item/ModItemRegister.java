@@ -1,6 +1,7 @@
 package com.bierfleisch.industrialmod.item;
 
 import com.bierfleisch.industrialmod.IndustrialMod;
+import com.bierfleisch.industrialmod.item.food.CreativeIodinePillItem;
 import com.bierfleisch.industrialmod.item.food.IodinePillItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.ArmorItem;
@@ -14,6 +15,7 @@ public class ModItemRegister {
     public static final Item RAW_PLUTONIUM_ITEM = new Item(new FabricItemSettings());
     public static final Item URANIUM_INGOT_ITEM = new Item(new FabricItemSettings());
     public static final Item PLUTONIUM_INGOT_ITEM = new Item(new FabricItemSettings());
+    public static final CreativeIodinePillItem CREATIVE_IODINE_PILL_ITEM = new CreativeIodinePillItem();
     public static final IodinePillItem IODINE_PILL_ITEM = new IodinePillItem();
     public static final Item IODINE_ITEM = new Item(new FabricItemSettings());
     public static final Item RAW_LEAD_ITEM = new Item(new FabricItemSettings());
@@ -33,6 +35,7 @@ public class ModItemRegister {
         registerItem("plutonium_ingot_item", ModItemRegister.PLUTONIUM_INGOT_ITEM);
 
         registerItem("iodine_pill_item", ModItemRegister.IODINE_PILL_ITEM);
+        registerItem("creative_iodine_pill_item", ModItemRegister.CREATIVE_IODINE_PILL_ITEM);
         registerItem("iodine_item", ModItemRegister.IODINE_ITEM);
 
         registerItem("raw_lead_item", ModItemRegister.RAW_LEAD_ITEM);

@@ -68,6 +68,7 @@ public class ModItemGroupRegister {
                 entries.add(ModItemRegister.IODINE_ITEM);
                 entries.add(ModBlockRegister.IODINE_BLOCK_ITEM);
                 entries.add(ModItemRegister.IODINE_PILL_ITEM);
+                entries.add(ModItemRegister.CREATIVE_IODINE_PILL_ITEM);
 
             })
             .build();

@@ -1,5 +1,6 @@
 package com.bierfleisch.industrialmod.mixin.client;
 
+import com.bierfleisch.industrialmod.radiation.RadiationData;
 import com.bierfleisch.industrialmod.util.IEntityDataSaver;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
@@ -55,14 +56,15 @@ public abstract class RenderHudStatusBarMixin {
         }
 
 
-
+/*
         drawContext.drawText(this.getTextRenderer(), String.valueOf(radiation),
                 this.scaledWidth / 2 + 20, this.scaledHeight / 2 - 3,
                 ColorHelper.Argb.getArgb(255, 0, 0, 0), false);
 
+ */
         final int maxPixelWidth = 69;
 
-        int pixelWidth = (int)(((float)radiation / 1000) * maxPixelWidth);
+        int pixelWidth = (int)(((float)radiation / RadiationData.maxRadiation) * maxPixelWidth);
 
         if (radiation > 10) {
             drawContext.drawTexture(RADIATION_SYMBOL, x + 10, y, 0, 0, 8, 8, 8, 8);

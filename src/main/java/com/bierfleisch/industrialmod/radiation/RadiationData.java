@@ -9,13 +9,15 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.network.ServerPlayerEntity;
 
 public class RadiationData {
+    public static final int maxRadiation = 10000;
+
     public static int addRadiation(IEntityDataSaver player, int amount) {
         NbtCompound nbt = player.getPersistentData();
         int radiation = nbt.getInt("radiation");
 
         if (amount < 1) return radiation;
 
-        radiation = Math.max(Math.min(amount + radiation, 1000), 0);
+        radiation = Math.max(Math.min(amount + radiation, maxRadiation), 0);
 
         nbt.putInt("radiation", radiation);
         syncRadiation(radiation, (ServerPlayerEntity) player);
@@ -26,7 +28,7 @@ public class RadiationData {
         NbtCompound nbt = player.getPersistentData();
 
         // Clamp between 0-100
-        int clampedAmount = Math.max(Math.min(amount, 1000), 0);
+        int clampedAmount = Math.max(Math.min(amount, maxRadiation), 0);
 
         nbt.putInt("radiation", clampedAmount);
         syncRadiation(clampedAmount, (ServerPlayerEntity) player);
@@ -39,7 +41,7 @@ public class RadiationData {
 
         if (amount < 1) return radiation;
 
-        radiation = Math.max(Math.min(radiation - amount, 1000), 0);
+        radiation = Math.max(Math.min(radiation - amount, maxRadiation), 0);
 
         nbt.putInt("radiation", radiation);
         syncRadiation(radiation, (ServerPlayerEntity) player);
